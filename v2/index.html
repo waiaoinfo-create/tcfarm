@@ -3,464 +3,1541 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>頭城農場及藏酒酒莊｜永續系統策略解析</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<title>頭城農場 &amp; 藏酒酒莊 - 簡報</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:100%;height:100%;overflow:hidden;font-family:'Noto Sans TC','Microsoft JhengHei',sans-serif;background:#1a2e1a}
-.deck{width:100%;height:100%;position:relative;overflow:hidden}
-.track{display:flex;height:100%;transition:transform .55s cubic-bezier(.25,.46,.45,.94)}
-.slide{flex:0 0 100%;height:100%;overflow-y:auto;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#f7f3ea 0%,#f0ece0 100%);padding:40px 52px 76px;position:relative}
-.slide::-webkit-scrollbar{width:6px}
-.slide::-webkit-scrollbar-thumb{background:#999;border-radius:3px}
-.s-inner{max-width:1100px;width:100%;margin:0 auto;flex:1;display:flex;flex-direction:column;justify-content:center}
-.s-num{position:absolute;top:20px;right:30px;font-size:3.8rem;font-weight:900;color:rgba(26,60,26,.06);pointer-events:none;letter-spacing:2px}
-.cover{position:relative;background:transparent;justify-content:center;align-items:center;text-align:center;padding:0;overflow:hidden}
-.cv2-bg{position:absolute;inset:0;background:linear-gradient(160deg,#0f1923 0%,#1a2a3a 40%,#1f3348 70%,#15202e 100%);z-index:0}
-.cv2-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 20%,rgba(212,160,30,.08) 0%,transparent 45%),radial-gradient(ellipse at 30% 80%,rgba(100,160,220,.06) 0%,transparent 40%);pointer-events:none}
-.cv2-pat{position:absolute;inset:0;z-index:0;opacity:.03;pointer-events:none;background-image:radial-gradient(circle at 25% 25%,#d4a01e 1px,transparent 1px),radial-gradient(circle at 75% 75%,#d4a01e 1px,transparent 1px);background-size:60px 60px}
-.cv2-content{position:relative;z-index:2;max-width:920px;margin:0 auto;padding:40px 48px;display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:100%}
-.cv2-tag{display:inline-block;background:rgba(212,160,30,.12);border:1px solid rgba(212,160,30,.3);color:#c8981e;padding:.35rem 1.6rem;border-radius:4px;font-size:.7rem;letter-spacing:3px;font-weight:500;margin-bottom:.8rem}
-.cv2-gline{width:50px;height:2px;background:linear-gradient(90deg,#d4a01e,transparent);margin-bottom:1.2rem}
-.cv2-h1{font-size:clamp(2.2rem,3.8vw,4rem);font-weight:800;color:#e8e8e8;letter-spacing:2px;line-height:1.2;margin-bottom:.3rem}
-.cv2-h1 .g{color:#d4a01e;font-weight:300}
-.cv2-sub{font-size:clamp(.9rem,1.4vw,1.2rem);color:rgba(200,180,140,.7);font-weight:300;letter-spacing:4px;margin-bottom:.6rem}
-.cv2-desc{font-size:.82rem;color:rgba(200,210,220,.5);line-height:1.7;max-width:650px;margin:0 auto}
-.cv2-metrics{display:flex;gap:1.2rem;justify-content:center;margin:1.4rem 0 .6rem;flex-wrap:wrap}
-.cvm{text-align:center;min-width:70px}
-.cvm-n{display:block;font-size:1.3rem;font-weight:800;color:#d4a01e;line-height:1.1}
-.cvm-l{display:block;font-size:.6rem;color:rgba(200,210,220,.45);letter-spacing:1px;margin-top:2px;text-transform:uppercase}
-.cv2-qr{position:fixed;bottom:60px;right:16px;z-index:100;text-align:center}
-.cv2-qr-img{display:block;width:90px;height:90px;border-radius:6px;border:1px solid rgba(212,160,30,.2);box-shadow:0 4px 24px rgba(0,0,0,.4)}
-.cv2-qr-l{display:block;color:rgba(200,210,220,.4);font-size:.5rem;margin-top:2px;letter-spacing:1px}
-.cv2-scroll{margin-top:.4rem;color:rgba(200,210,220,.3);font-size:.65rem;letter-spacing:3px}
-.cv2-scroll span{display:inline-block;animation:cv2pl 1.5s ease-in-out infinite;margin-left:5px}
-@keyframes cv2pl{0%,100%{transform:translateX(0);opacity:.4}50%{transform:translateX(5px);opacity:1}}
-.s-head{margin-bottom:16px}
-.s-head h2{font-size:clamp(1.4rem,2.5vw,2rem);font-weight:700;color:#1a5c2e;line-height:1.35}
-.s-head h2::after{content:'';display:block;width:55px;height:3px;background:linear-gradient(90deg,#1a5c2e,#d4a01e);border-radius:2px;margin-top:6px}
-.s-head p{color:#777;font-size:.9rem;margin-top:4px}
-.s-contact{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font-size:.82rem;color:#666}
-.s-contact span{background:#f0f7f0;padding:4px 12px;border-radius:6px}
-.clink{color:#1a5c2e;text-decoration:none;font-weight:600}
-.clink:hover{color:#d4a01e;text-decoration:underline}
-.s-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:8px;margin-bottom:14px}
-.ss{background:#fff;border-radius:10px;padding:10px 8px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.03);border-top:3px solid #1a5c2e}
-.ss.gold-b{border-top-color:#d4a01e}
-.ss-n{display:block;font-size:1.2rem;font-weight:900;color:#1a5c2e;line-height:1.1}
-.ss.gold-b .ss-n{color:#d4a01e}
-.ss-l{display:block;font-size:.65rem;color:#666;margin-top:3px;line-height:1.3}
-.s-grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1}
-.s-grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;flex:1}
-.s-grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;flex:1}
-.scard{background:#fff;border-radius:12px;padding:16px 14px;box-shadow:0 2px 14px rgba(0,0,0,.04);border:1px solid rgba(26,92,46,.04);transition:transform .2s}
-.scard:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.07)}
-.scard h3{font-size:1rem;font-weight:700;color:#1a5c2e;margin-bottom:6px}
-.scard h4{font-size:.88rem;font-weight:600;color:#3a7d44;margin:8px 0 4px}
-.scard p{font-size:.82rem;color:#444;line-height:1.65;margin-bottom:3px}
-.scard ul{padding-left:16px;font-size:.82rem;color:#444;line-height:1.55}
-.scard li{margin-bottom:3px}
-.scard li strong{color:#1a5c2e}
-.sci{font-size:1.6rem;margin-bottom:4px;display:block}
-.sci.lg{font-size:2rem}
-.scard.cc{text-align:center;padding:14px 10px}
-.scard.cc ul{text-align:left;font-size:.8rem}
-.scard.cc li{margin-bottom:2px}
-.s-highlight{background:#fff;border:2px solid #d4a01e;border-radius:12px;padding:14px 16px;margin-bottom:10px;position:relative}
-.hl-badge{position:absolute;top:-1px;right:20px;background:#d4a01e;color:#fff;padding:2px 14px;border-radius:0 0 8px 8px;font-size:.65rem;font-weight:700}
-.s-highlight h3{font-size:1rem;color:#1a5c2e;margin-bottom:3px}
-.s-highlight ul{padding-left:16px;font-size:.82rem;color:#444;line-height:1.55}
-.s-highlight li{margin-bottom:3px}
-.s-highlight li strong{color:#1a5c2e}
-.s-quote{background:linear-gradient(135deg,#f0f7f0,#f5f0e0);border-left:4px solid #d4a01e;border-radius:0 8px 8px 0;padding:8px 14px;margin-top:10px;font-size:.85rem;color:#444;line-height:1.55;font-style:italic}
-.s-quote.green{border-left-color:#1a5c2e;font-style:normal}
-.s-quote strong{color:#1a5c2e}
-.s-chain{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;align-items:center;margin:16px 0}
-.clink-item{text-align:center;background:#fff;border-radius:10px;padding:10px 6px;box-shadow:0 2px 10px rgba(0,0,0,.04)}
-.cl-icon{display:block;font-size:1.5rem;margin-bottom:2px}
-.cl-label{display:block;font-weight:700;color:#1a5c2e;font-size:.78rem}
-.cl-desc{display:block;font-size:.68rem;color:#666;margin-top:2px}
-.cl-arrow{text-align:center;font-size:1.2rem;color:#d4a01e;font-weight:700}
-.end{position:relative;justify-content:center;align-items:center;text-align:center;background:transparent;padding:36px}
-.end-bg{position:absolute;inset:0;background:linear-gradient(135deg,#0d3b1e,#1a5c2e);z-index:0}
-.end-content{position:relative;z-index:2;max-width:900px;margin:0 auto}
-.end h2{font-size:clamp(1.6rem,2.8vw,2.4rem);color:#d4a01e;margin-bottom:1.2rem;font-weight:700}
-.end h2::after{display:none}
-.end-sub{font-size:.9rem;color:rgba(255,255,255,.7);margin-bottom:1.5rem}
-.end-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem;max-width:800px;margin:0 auto}
-.ecard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:1.2rem;text-align:left}
-.ecard h4{color:#d4a01e;font-size:.85rem;margin-bottom:.5rem;letter-spacing:1px}
-.ecard p{font-size:.78rem;color:rgba(255,255,255,.65);line-height:1.55;margin:0}
-.end-rep{margin-top:1.2rem;padding:.4rem 1.8rem;background:rgba(212,160,30,.1);border:1px solid rgba(212,160,30,.25);border-radius:50px;display:inline-block;color:#d4a01e;font-size:.85rem;letter-spacing:1px}
-.end-foot{margin-top:1.2rem;font-size:.7rem;color:rgba(255,255,255,.35)}
-.nav{position:fixed;bottom:0;left:0;right:0;height:46px;background:rgba(13,59,30,.95);backdrop-filter:blur(10px);display:flex;align-items:center;justify-content:center;gap:12px;z-index:999;padding:0 16px;border-top:1px solid rgba(255,255,255,.06)}
-.nav-btn{background:rgba(255,255,255,.1);border:none;color:#fff;width:34px;height:28px;border-radius:6px;cursor:pointer;font-size:.95rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
-.nav-btn:hover{background:rgba(212,160,30,.3)}
-.nav-btn:disabled{opacity:.25;cursor:default;background:rgba(255,255,255,.04)}
-.nav-counter{color:rgba(255,255,255,.7);font-size:.7rem;letter-spacing:1px;min-width:48px;text-align:center;font-weight:500}
-.nav-progress{flex:1;max-width:160px;height:3px;background:rgba(255,255,255,.1);border-radius:2px;overflow:hidden}
-.nav-progress-bar{height:100%;background:linear-gradient(90deg,#d4a01e,#f0d080);border-radius:2px;transition:width .5s}
-.nav-title{color:rgba(255,255,255,.4);font-size:.62rem;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-@media(max-width:900px){.cv2-qr{bottom:55px;right:10px}.cv2-qr-img{width:72px;height:72px}.s-chain{grid-template-columns:repeat(3,1fr)}.s-grid2,.s-grid3,.s-grid4{grid-template-columns:1fr 1fr}}
-@media(max-width:640px){
-.slide{padding:18px 16px 66px}
-.cv2-qr{bottom:52px;right:6px}.cv2-qr-img{width:62px;height:62px}.cv2-qr-l{display:none}
-.s-grid2,.s-grid3,.s-grid4{grid-template-columns:1fr}
-.s-chain{grid-template-columns:1fr 1fr;gap:4px}.cl-arrow{display:none}
-.s-num{font-size:2.5rem;top:10px;right:14px}
-.cv2-h1{font-size:clamp(1.6rem,6vw,2rem)}
-.cv2-metrics{gap:.6rem}
-.cvm-n{font-size:1.1rem}
-.tl{flex-direction:column;gap:3px}
-.nav-title{display:none}
-.end-grid{grid-template-columns:1fr}
-.s-head h2{font-size:1.2rem}
-}</style>
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;overflow:hidden;width:100vw;height:100dvh;background:#111;color:#222}
+.slide{display:none;width:100%;height:100dvh;overflow-y:auto;position:relative;padding:4vh 5vw;background:#fff}
+.slide.active{display:flex;flex-direction:column;justify-content:center;align-items:center}
+.s-inner{max-width:1000px;width:100%;margin:0 auto}
+.s-head{text-align:center;margin-bottom:14px}
+.s-head h2{font-size:clamp(1.3rem,2.6vw,2rem);color:#1a5c2e;margin-bottom:4px}
+.s-head p{font-size:clamp(.8rem,1.2vw,.95rem);color:#666}
+.s-num{position:absolute;top:2vh;right:3vw;font-size:clamp(1.5rem,3vw,2.6rem);font-weight:800;color:#d4a01e;opacity:.18;z-index:0;pointer-events:none;line-height:1}
+.s-body{font-size:clamp(.75rem,1.15vw,.88rem);line-height:1.7;margin-top:6px}
+.s-body p{margin-bottom:6px}
+.s-body .hl{background:#f0f7f0;padding:8px 14px;border-radius:8px;border-left:3px solid #1a5c2e;margin:8px 0}
+.s-body .tag{display:inline-block;background:#1a5c2e;color:#fff;padding:2px 12px;border-radius:12px;font-size:.75rem;font-weight:600;margin:2px}
+.s-body .tag.g{background:#b8860b}
+.s-body .tag.b{background:#1a5276}
+.s-body .tag.p{background:#6b2fa0}
+.s-body .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0}
+.s-body .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:8px 0}
+.s-body .card{background:#f9f9f9;border-radius:8px;padding:10px 12px;border-top:3px solid #3a7d44}
+.s-body .card.g{border-top-color:#b8860b}
+.s-body .card ul{margin:4px 0 0 16px}
+.s-body .card li{margin-bottom:2px}
+.s-body hr{border:none;border-top:1px dashed #ddd;margin:10px 0}
+.s-contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:.78rem;color:#555;justify-content:center}
+.clink{color:#1a5c2e;text-decoration:none}
+.clink:hover{text-decoration:underline}
+/* Cover */
+.cover{background:linear-gradient(135deg,#0a1f0e,#1a3a1e,#2a5a2e);text-align:center}
+.cover .s-inner{max-width:800px}
+.cover h1{font-size:clamp(2rem,4.5vw,3.6rem);color:#fff;font-weight:800;line-height:1.15;margin-bottom:6px}
+.cover h1 .g{color:#d4a01e}
+.cover .sub{font-size:clamp(.9rem,1.6vw,1.2rem);color:#a8d5a2;margin-bottom:4px}
+.cover .meta{font-size:clamp(.7rem,1vw,.8rem);color:rgba(255,255,255,.5);margin-bottom:14px}
+.cover .stats{display:flex;justify-content:center;gap:clamp(8px,2vw,24px);flex-wrap:wrap}
+.cover .stats div{text-align:center}
+.cover .stats .n{font-size:clamp(1rem,1.8vw,1.5rem);font-weight:700;color:#d4a01e}
+.cover .stats .l{font-size:clamp(.55rem,.8vw,.7rem);color:rgba(255,255,255,.45)}
+.cover-qr{position:absolute;bottom:2.5vh;right:3vw;text-align:center;z-index:3}
+.cover-qr img{width:clamp(50px,5vw,70px);border-radius:4px}
+.cover-qr span{display:block;font-size:clamp(.45rem,.6vw,.55rem);color:rgba(255,255,255,.4)}
+.scroll-hint{position:absolute;bottom:2.5vh;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.3);font-size:clamp(.55rem,.7vw,.65rem)}
+.scroll-hint span{display:inline-block;animation:b2 1.5s infinite}
+@keyframes b2{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+/* Nav */
+.slide-nav{position:fixed;bottom:2vh;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;z-index:100;padding:5px 14px;background:rgba(0,0,0,.6);backdrop-filter:blur(6px);border-radius:24px}
+.slide-nav button{background:rgba(255,255,255,.12);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:.8rem;cursor:pointer;font-weight:700;transition:.2s}
+.slide-nav button:hover{background:rgba(255,255,255,.25)}
+.slide-nav .pi{color:rgba(255,255,255,.6);font-size:.7rem;min-width:50px;text-align:center}
+@media(max-width:640px){.slide{padding:2vh 3vw}.s-body{font-size:.8rem}.s-body .grid2,.s-body .grid3{grid-template-columns:1fr!important}}
+</style>
 </head>
 <body>
-<div class="deck">
-<div class="track" id="track"><section class="slide cover" data-title="封面">
-<div class="cv2-bg"></div>
-<div class="cv2-pat"></div>
-<div class="cv2-content">
-<div class="cv2-tag">STRATEGY BRIEF 2026</div>
-<div class="cv2-gline"></div>
-<h1 class="cv2-h1">頭城農場<span class="g"> & </span>藏酒酒莊</h1>
-<p class="cv2-sub">永續系統策略深度解析</p>
-<p class="cv2-desc">從傳統休閒農場到一套把土地、生態、食物、教育與旅宿<br>轉換成可體驗價值的系統</p>
-<div class="cv2-metrics">
-<div class="cvm"><span class="cvm-n">1979</span><span class="cvm-l">創立</span></div>
-<div class="cvm"><span class="cvm-n">110–120</span><span class="cvm-l">公頃</span></div>
-<div class="cvm"><span class="cvm-n">6+</span><span class="cvm-l">營運系統</span></div>
-<div class="cvm"><span class="cvm-n">8</span><span class="cvm-l">客群類別</span></div>
-<div class="cvm"><span class="cvm-n">GSTC</span><span class="cvm-l">認證</span></div>
+<section class="slide cover" data-title="封面">
+<div class="s-inner" style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:80vh">
+<h1>頭城</h1>
+<p class="sub">農場及藏酒酒</p>
+<p class="meta">莊</p>
+<div class="stats">
+<div class=""><div class="n">1</div><div class="l">投影片</div></div>
 </div>
-<div class="cv2-qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=https://waiaoinfo-create.github.io/tcfarm/v2/" alt="QR" class="cv2-qr-img"><span class="cv2-qr-l">手機掃碼閱讀</span></div>
-<div class="cv2-scroll">下一頁 <span>▶</span></div>
 </div>
+<div class="cover-qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=70x70&data=https://waiaoinfo-create.github.io/tcfarm/v2/" alt="QR"><span>手機掃碼閱讀</span></div>
+<div class="scroll-hint">下一頁 <span>▶</span></div>
 </section>
-<section class="slide" data-title="核心判讀">
-<div class="s-num">01</div>
-<div class="s-inner">
-<div class="s-head"><h2>核心判讀：頭城農場真正賣的是什麼？</h2><p>不是單一景點，而是一套可體驗的永續系統</p></div>
-<div class="s-grid2">
-<div class="scard"><div class="sci">🌳</div><h3>土地資產</h3><p>雪山山脈山腳、淺山生態、溪流、森林與農地，構成無法複製的自然資本。</p></div>
-<div class="scard"><div class="sci">🔄</div><h3>體驗轉譯</h3><p>農事、昆蟲旅館、森林餐桌、溪流監測、植樹——把抽象生態變成可參與的行動。</p></div>
-<div class="scard"><div class="sci">🏨</div><h3>餐旅變現</h3><p>住宿、餐食、農村酒莊二日遊、團體遊程，形成完整商業模式。</p></div>
-<div class="scard"><div class="sci">📊</div><h3>永續證據</h3><p>認證、國際獎項、在地合作與循環農業實作，建構第三方信任。</p></div>
-</div>
-<div class="s-quote green"><strong>策略結論：</strong>未來成長重點不應只是「增加遊客」，而是提升每位訪客的停留時間、學習深度、在地消費與可量化環境貢獻。</div>
-</div>
-</section>
-<section class="slide" data-title="基本資料">
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
 <div class="s-num">02</div>
 <div class="s-inner">
-<div class="s-head"><h2>FACT BASE 可核驗基本資料</h2></div>
-<div class="s-grid2">
-<div class="scard"><div class="sci">📍</div><h3>位置與聯絡</h3><p>地址：宜蘭縣頭城鎮更新路125-1號<br>電話：<a href="tel:+88639772222" class="clink">03-9772222</a><br>客服時間：08:00–17:30<br>官網：<a href="https://www.tcfarm.com.tw" target="_blank" class="clink">www.tcfarm.com.tw</a></p></div>
-<div class="scard"><div class="sci">📐</div><h3>經營面積</h3><p>外部資料出現<strong>110公頃</strong>與<strong>120公頃</strong>兩種說法，本報告嚴謹保留兩者，不擅自選定。待官方最終合約確認。</p></div>
-<div class="scard"><div class="sci">📦</div><h3>產品型態</h3><p>一日遊、二日一夜、三日二夜、五日四夜、團體、環教、穆斯林友善、無障礙、季節遊程。</p></div>
-<div class="scard"><div class="sci">🏆</div><h3>永續時間軸</h3><p>2019 GSTC認證起點 → 2022 AEN大獎 → 2024 ITB柏林第2名 → 2024.06 regenagri認證 → 2025.08 Unboxing TLF ESG發布</p></div>
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>主講者簡介</p>
+<p>卓志宏</p>
+<p>頭城農場  代表人</p>
+<p>藏酒酒莊  莊主</p>
+<p>台灣農場經營協會  理事長</p>
+<p>宜蘭縣有機農業產銷發展協會  常務監事</p>
+<p>紐澤西理工學院電腦碩士、工業管理碩士</p>
+<p>2010 觀光拔尖領航方案選派澳洲</p>
+<p>法國藍帶餐飲學院受訓</p>
+<p>2015 觀光產業關鍵人才培育高階主管</p>
+<p>台灣休閒農業發展協會  常務理事</p>
+<p>台灣休閒農業學會  理事</p>
+<p>台灣農業旅遊發展協會  理事</p>
+<p>宜蘭縣觀光工廠發展協會  常務監事</p>
+<p>宜蘭縣觀光協會  總幹事</p>
 </div>
-<div class="s-contact"><span>📞 03-9772222</span><span>✉ tcfarminfo@gmail.com</span><span>🌐 www.tcfarm.com.tw</span></div>
 </div>
 </section>
-<section class="slide" data-title="里山系統">
+<section class="slide" data-title="簡報大綱">
 <div class="s-num">03</div>
 <div class="s-inner">
-<div class="s-head"><h2>里山系統：場域不是背景，而是產品本體</h2></div>
-<div class="s-grid3">
-<div class="scard cc"><div class="sci lg">🌲</div><h3>自然底層</h3><p>淺山森林、溪流、農地、動植物棲地，以及鄰近東北角海岸與漁村，構成可被長期觀察、學習與維護的場域。</p></div>
-<div class="scard cc"><div class="sci lg">🤝</div><h3>人文介面</h3><p>農耕、飲食、釀造、在地農漁合作與團體活動，把抽象的生態知識轉成可參與的日常行動。</p></div>
-<div class="scard cc"><div class="sci lg">🏪</div><h3>商業載體</h3><p>住宿、餐飲、環境教育、企業團建、長住、季節遊程與酒莊組合，使保育投入獲得營運支持。</p></div>
+<div class="s-head"><h2>簡報大綱</h2></div>
+<div class="s-body">
+<p>綠色旅遊新趨勢</p>
+<p>演講人的資經歷介紹</p>
+<p>頭城農場介紹</p>
+<p>結語</p>
+<p>頭城農場的多元農地利用與農業創新服務</p>
+<p>台灣休閒農業發展史與頭城農場的沿革</p>
+<p>藏酒酒莊經營分享</p>
 </div>
-<div class="s-quote"><strong>核心觀點：</strong>頭城農場的真正產品不是「農場」或「酒莊」，而是持續提出可驗證的新內容，並讓遊客理解自己如何參與土地改善。</div>
 </div>
 </section>
-<section class="slide" data-title="價值鏈">
+<section class="slide" data-title="頭城農場 & 藏酒酒莊">
 <div class="s-num">04</div>
 <div class="s-inner">
-<div class="s-head"><h2>完整價值鏈：從土壤到回訪</h2><p>每一環節皆需獨立衡量，不可僅計算入園人次</p></div>
-<div class="s-chain">
-<div class="clink-item"><span class="cl-icon">🌱</span><span class="cl-label">自然資本</span><span class="cl-desc">土壤·森林·溪流</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">👨‍🌾</span><span class="cl-label">生產維護</span><span class="cl-desc">友善農法·循環投入</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🎨</span><span class="cl-label">體驗設計</span><span class="cl-desc">採集·觀察·手作</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🍽️</span><span class="cl-label">消費轉換</span><span class="cl-desc">餐桌·酒莊·住宿</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🏅</span><span class="cl-label">信任建立</span><span class="cl-desc">故事·認證·獎項</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🔄</span><span class="cl-label">回訪擴散</span><span class="cl-desc">會員·企業·學校</span></div>
+<div class="s-head"><h2>頭城農場 & 藏酒酒莊</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="八大客群">
+<section class="slide" data-title="頭城農場 Toucheng Farm">
 <div class="s-num">05</div>
 <div class="s-inner">
-<div class="s-head"><h2>八大客群與需求邏輯</h2></div>
-<div class="s-grid4">
-<div class="scard cc"><div class="sci">👨‍👩‍👧‍👦</div><h3>親子家庭</h3><p>安全、互動、動物與手作體驗</p></div>
-<div class="scard cc"><div class="sci">📚</div><h3>學校戶外教育</h3><p>對接課綱、學習單、可評量教學</p></div>
-<div class="scard cc"><div class="sci">🏢</div><h3>企業ESG團建</h3><p>員工參與、成果揭露、數據量化</p></div>
-<div class="scard cc"><div class="sci">👴</div><h3>銀髮長住</h3><p>慢節奏、舒適、低強度活動</p></div>
-<div class="scard cc"><div class="sci">🌏</div><h3>國際旅客</h3><p>多語言轉譯、文化、交通便利</p></div>
-<div class="scard cc"><div class="sci">🕌</div><h3>穆斯林旅客</h3><p>飲食認證、禮拜友善空間</p></div>
-<div class="scard cc"><div class="sci">🔭</div><h3>生態深度客</h3><p>特定物種、螢火蟲、夜間觀察</p></div>
-<div class="scard cc"><div class="sci">🍷</div><h3>酒食旅客</h3><p>風味故事、搭餐設計、伴手禮</p></div>
+<div class="s-head"><h2>頭城農場 Toucheng Farm</h2></div>
+<div class="s-body">
+<p>農場成立的故事</p>
+<p>三十九年的築夢踏實之旅</p>
+<p>創辦人卓媽媽</p>
+<p>頭城農場介紹</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="護城河">
+<section class="slide" data-title="離臺北才一小時並可結合的在地觀光資源: ">
 <div class="s-num">06</div>
 <div class="s-inner">
-<div class="s-head"><h2>競爭優勢拆解：真正的護城河</h2></div>
-<div class="s-grid2">
-<div class="scard"><div class="sci">🏞️</div><h3>場域複合性</h3><p>森林、溪流、農地、餐桌、住宿與酒莊能串成多日深度行程，競爭者難以短期複製。</p></div>
-<div class="scard"><div class="sci">⏳</div><h3>時間累積性</h3><p>生態恢復、土壤健康、解說知識與在地合作網絡，均無法透過短期資金購買。</p></div>
-<div class="scard"><div class="sci">🎯</div><h3>體驗轉譯能力</h3><p>「森林餐桌」能把物種關係直接變成味覺與故事，而非單純的看版解說。</p></div>
-<div class="scard"><div class="sci">✅</div><h3>第三方信任</h3><p>GSTC、regenagri認證與國際獎項，降低了企業採購與國際客的選擇風險。</p></div>
+<div class="s-head"><h2>離臺北才一小時並可結合的在地觀光資源: 蘭陽博物館、外澳海灘、梗枋海鮮、頭城農場、外澳民宿群聚、大溪漁港、東北角海岸風景特定區</h2></div>
+<div class="s-body">
+<p>成為北臺灣農村休閒觀光旅遊新亮點。</p>
+<p>頭城農場的基本資訊-地理位置</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="六大營運系統">
+<section class="slide" data-title="www.tcfarm.com.tw  T">
 <div class="s-num">07</div>
 <div class="s-inner">
-<div class="s-head"><h2>農場六大內容營運系統</h2></div>
-<div class="s-grid3">
-<div class="scard"><div class="sci">🐾</div><h3>生態保育</h3><p>物種觀察、棲地營造、溪流監測、森林保護。紅外線自動相機監測山羌、穿山甲等。</p></div>
-<div class="scard"><div class="sci">🌱</div><h3>友善農業</h3><p>土壤改良、有機堆肥、作物栽培、林下經濟。2公頃有機菜園、廢棄菇包循環利用。</p></div>
-<div class="scard"><div class="sci">📖</div><h3>環境教育</h3><p>系統化課程、專業導覽解說、學習成果評量。通過環境教育設施場所認證。</p></div>
-<div class="scard"><div class="sci">🍴</div><h3>綠色餐飲</h3><p>在地食材採購、季節風味菜單、沉浸式森林餐桌。獲綠色餐飲指南大獎。</p></div>
-<div class="scard"><div class="sci">🏡</div><h3>旅宿服務</h3><p>多日停留規劃、夜間觀察導覽、慢生活節奏體驗。35間客房一泊三食五體驗。</p></div>
-<div class="scard"><div class="sci">🤝</div><h3>社群協作</h3><p>鄰近農漁合作、學術機構、企業夥伴與國際旅客互動，50團以上國內外參訪。</p></div>
+<div class="s-head"><h2>www.tcfarm.com.tw  TEL:+886 3 9772222  ADD:宜蘭縣頭城鎮更新路125號</h2></div>
+<div class="s-body">
+<p><strong>成立時間:</strong> 西元1979年─築夢的開始</p>
+<p>地理位置：宜蘭縣頭城鎮</p>
+<p><strong>面　　積:</strong> 120公頃</p>
+<p><strong>營業項目:</strong> 農業經營、體驗學校、環境教育、餐飲住宿</p>
+<p><strong>主要提供:</strong> 健康食材、戶外教學、休閒渡假、品味生活</p>
+<p><strong>經營理念:</strong> 健康、快樂、體驗、學習</p>
+<p>頭城農場的基本資訊-營運現況</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="森林餐桌">
+<section class="slide" data-title="頭城農場的特色-獨一無二的臺灣農村旅遊經">
 <div class="s-num">08</div>
 <div class="s-inner">
-<div class="s-head"><h2>案例：森林餐桌 — 把生態變成體驗</h2></div>
-<div class="s-grid3">
-<div class="scard cc"><div class="sci lg">🌳</div><h3>鳥類的餐桌</h3><p>以多種果實與小點構成，傳達鳥類在森林中的覓食行為。代表樹冠層生態。</p></div>
-<div class="scard cc"><div class="sci lg">🌸</div><h3>蜜蜂的餐桌</h3><p>以花卉、蜂蜜相關食材組合，演繹授粉昆蟲的生態角色。代表灌木層生態。</p></div>
-<div class="scard cc"><div class="sci lg">🐗</div><h3>山豬的餐桌</h3><p>黑糖粉下埋藏地瓜球，模擬山豬拱地覓食。代表地面層生態。</p></div>
+<div class="s-head"><h2>頭城農場的特色-獨一無二的臺灣農村旅遊經驗</h2></div>
+<div class="s-body">
+<p>頭城農場介紹</p>
+<p>農村價值 臺灣農村旅遊經驗 鄉村景色 農業體驗</p>
 </div>
-<div class="s-highlight">
-<h3>設計公式</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:.85rem">
-<div><strong>①</strong> 物種關係 → 選擇生態角色<br><strong>②</strong> 感官隱喻 → 轉成味覺與動作</div>
-<div><strong>③</strong> 解說節奏 → 安排故事與提問<br><strong>④</strong> 行動承諾 → 連結到棲地維護</div>
-</div>
-</div>
-<div class="s-quote green"><strong>商業價值：</strong>把傳統導覽升級為高客單價沉浸式餐食，創造可拍攝、可記憶、可分享、可獲獎的差異化遊程。</div>
 </div>
 </section>
-<section class="slide" data-title="循環農業">
+<section class="slide" data-title="頭城農場與台灣休閒農業的發展過程相符">
 <div class="s-num">09</div>
 <div class="s-inner">
-<div class="s-head"><h2>案例：循環農業實作與KPI框架</h2></div>
-<div class="s-grid2">
-<div class="scard"><div class="sci">🍄</div><h3>廢棄菇包再利用</h3><p>將菇包轉化為有機質，協助螢火蟲族群棲地復育，延伸出夜間生態觀察產品。</p></div>
-<div class="scard"><div class="sci">🪱</div><h3>都市蚯蚓農場</h3><p>蚯蚓箱形成自我維持的生物動力循環，消化有機碎屑，供應富含微生物的有機土。</p></div>
-<div class="scard"><div class="sci">🌿</div><h3>生態方舟植生牆</h3><p>自動滴灌系統，集中展示在地原生物種保育，兼具教育與景觀功能。</p></div>
-<div class="scard"><div class="sci">🌲</div><h3>溪流與植樹參與</h3><p>生態造林與溪流科學監測納入企業ESG遊程，20,000+株原生樹種復育。</p></div>
+<div class="s-head"><h2>頭城農場與台灣休閒農業的發展過程相符</h2></div>
+<div class="s-body">
+<p>台灣休閒農業介紹</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="環教與旅宿">
+<section class="slide" data-title="頭城休閒農場經營沿革">
 <div class="s-num">10</div>
 <div class="s-inner">
-<div class="s-head"><h2>環境教育與旅宿延長策略</h2></div>
-<div class="s-grid3">
-<div class="scard cc"><div class="sci lg">🌅</div><h3>白天</h3><p>農事體驗、溪流探索、森林漫步、昆蟲旅館製作、手作與團隊凝聚活動。</p></div>
-<div class="scard cc"><div class="sci lg">🌙</div><h3>傍晚與夜間</h3><p>微醺晚餐、酒莊品飲、螢火蟲季、夜間生態觀察、聲景與低光環境體驗。</p></div>
-<div class="scard cc"><div class="sci lg">🌄</div><h3>清晨</h3><p>晨間物候觀察、鳥類聆聽、農場工作日常與慢生活節奏。</p></div>
+<div class="s-head"><h2>頭城休閒農場經營沿革</h2></div>
+<div class="s-body">
+<p>頭城農場介紹</p>
 </div>
-<div class="s-quote green"><strong>學習路徑：</strong>看見（辨識）→ 理解（食物網）→ 操作（監測堆肥）→ 反思（消費行為）→ 行動（回家實踐）</div>
 </div>
 </section>
-<section class="slide" data-title="酒莊角色">
+<section class="slide" data-title="休閒農業的定義">
 <div class="s-num">11</div>
 <div class="s-inner">
-<div class="s-head"><h2>藏酒酒莊在整體系統中的五種角色</h2></div>
-<div class="s-grid3">
-<div class="scard cc"><div class="sci">🎯</div><h3>成人體驗錨點</h3><p>讓原本偏向親子或學童的行程，增加成人專屬的精緻層次。</p></div>
-<div class="scard cc"><div class="sci">🏭</div><h3>農產加值介面</h3><p>將在地原料轉化為可長久保存的風味故事與高端產品。</p></div>
-<div class="scard cc"><div class="sci">💰</div><h3>餐飲客單提升</h3><p>專業搭餐、品飲體驗與高端伴手禮延伸消費。</p></div>
-<div class="scard cc"><div class="sci">🌃</div><h3>夜間內容補足</h3><p>補足訪客住宿後的晚間活動空缺，創造高品質社交場景。</p></div>
-<div class="scard cc"><div class="sci">🏷️</div><h3>品牌記憶載體</h3><p>酒窖、釀造工藝、年份與土地連結，形成可供收藏的品牌敘事。</p></div>
+<div class="s-head"><h2>休閒農業的定義</h2></div>
+<div class="s-body">
+<p>「利用田園景觀、自然生態及環境資源，結合農林漁牧生產、農業經營活動、農村文化及農家生活，提供國民休閒，增進國民對農業及農村之體驗為目的之農業經營」</p>
+<p>從休閒農業到綠色旅遊的發展模式</p>
+<p>休閒農業 三生農業資源體驗</p>
+<p>綠色(農業)旅遊</p>
+<p>生命 永續 綠色(農業)旅遊</p>
+<p>整個旅遊過程的各個環節都秉持尊重自然人文、保護環境進行綠色消費,從而達到社會公益、經濟發展和生態環境永續的境界。</p>
+<p>- 2016 宜蘭大學 陳凱俐教授</p>
+<p>社會 經濟 生態</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="酒莊八問">
+<section class="slide" data-title="綠色(農業)旅遊需求與原則">
 <div class="s-num">12</div>
 <div class="s-inner">
-<div class="s-head"><h2>酒莊體驗「八個真實性問題」</h2></div>
-<div class="s-grid2">
-<div><div class="scard" style="min-height:auto;padding:10px 14px"><p>① 使用哪些原料？產地與季節為何？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>② 釀造／熟成方法與實際時間為何？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>③ 酒精濃度、容量、批次標示是否完整？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>④ 風味描述有無感官評鑑或製程依據？</p></div></div>
-<div><div class="scard" style="min-height:auto;padding:10px 14px"><p>⑤ 品飲流程如何兼顧教育、節制與安全？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>⑥ 如何與農場餐食、食材及故事搭配？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>⑦ 酒莊與農場循環系統的實際連結？</p></div>
-<div class="scard" style="min-height:auto;padding:10px 14px;margin-top:6px"><p>⑧ 哪些數據可公開：年產量、在地採購、廢棄物再利用？</p></div></div>
+<div class="s-head"><h2>綠色(農業)旅遊需求與原則</h2></div>
+<div class="s-body">
+<p>滿足旅遊新潮流</p>
+<p><strong>食:</strong>有機當季</p>
+<p><strong>衣:</strong>輕便舒適減少耗能</p>
+<p><strong>住:</strong>節能在地(綠色旅館)</p>
+<p><strong>行:</strong>公共低碳</p>
+<p><strong>育:</strong>不違反自然秉持3R原則(Reduce,reuse,recycle)</p>
+<p><strong>樂:</strong>關心在地環境與人文、生態</p>
+<p><strong>購:</strong>增加在地業者以益又能減少貨物運輪的耗能</p>
+<p><strong>公益:</strong>藉由旅遊消費進行碳補償〈例如植樹〉。</p>
+<p>頭城農場消費者經驗</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="酒莊價值鏈">
+<section class="slide" data-title="六塊水稻田 50公頃有機桂竹林 2公頃的">
 <div class="s-num">13</div>
 <div class="s-inner">
-<div class="s-head"><h2>酒莊完整價值鏈</h2></div>
-<div class="s-chain" style="grid-template-columns:repeat(3,1fr);font-size:.82rem">
-<div class="clink-item"><span class="cl-icon">🍊</span><span class="cl-label">原料</span><span class="cl-desc">產地·採收·風味</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🔧</span><span class="cl-label">處理</span><span class="cl-desc">清洗·破碎·調整</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">⚗️</span><span class="cl-label">發酵</span><span class="cl-desc">時間·溫度·微生物</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🛢️</span><span class="cl-label">熟成</span><span class="cl-desc">容器·環境·批次</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🍷</span><span class="cl-label">品飲</span><span class="cl-desc">感官·文化·節制</span></div>
-<div class="cl-arrow">→</div>
-<div class="clink-item"><span class="cl-icon">🎁</span><span class="cl-label">零售</span><span class="cl-desc">伴手禮·會員·節慶</span></div>
-</div>
-<div class="s-stats" style="margin-top:16px">
-<div class="ss"><span class="ss-n">春梅</span><span class="ss-l">青梅酒</span></div>
-<div class="ss gold-b"><span class="ss-n">夏葡</span><span class="ss-l">葡萄酒</span></div>
-<div class="ss"><span class="ss-n">秋米</span><span class="ss-l">米酒</span></div>
-<div class="ss gold-b"><span class="ss-n">冬棗</span><span class="ss-l">金棗酒</span></div>
+<div class="s-head"><h2>六塊水稻田 50公頃有機桂竹林 2公頃的有機蔬菜園 迴圈再利用的堆肥廠</h2></div>
+<div class="s-body">
+<p>生產資源(在地與當令)</p>
+<p>水稻田 土牆厝 傳統農具展示區 推石磨、米食製作區 插秧的辛勞 傳統的智慧 體驗米食文化的多元 就地取材的古老傳承</p>
+<p>生活資源(農村文化與價值呈現)</p>
+<p>尋找自身的特色資源</p>
+<p>綠色體驗資源-生產與生活</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="二日遊">
+<section class="slide" data-title="因為友善土地農法而有生物多樣性(環境特殊">
 <div class="s-num">14</div>
 <div class="s-inner">
-<div class="s-head"><h2>跨系統產品：農村·酒莊二日遊</h2></div>
-<div class="s-grid2">
-<div class="scard"><h3>📅 Day 1｜建立土地感</h3><ul><li>抵達→農場導覽</li><li>農事／生態體驗</li><li>晚餐</li><li>酒莊品飲與故事敘事</li><li>夜間生態活動</li></ul></div>
-<div class="scard"><h3>📅 Day 2｜形成全面理解</h3><ul><li>晨間觀察</li><li>豐富早餐</li><li>循環農業實作／工藝手作</li><li>森林餐桌或在地特色餐</li><li>發表行動承諾＋伴手禮</li></ul></div>
-</div>
-<div class="s-highlight" style="margin-top:10px">
-<h3>營運追蹤指標</h3>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.78rem;margin-top:6px">
-<div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>每人總消費</strong></div>
-<div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>酒莊加購率</strong></div>
-<div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>住宿率</strong></div>
-<div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>NPS推薦值</strong></div>
-</div>
+<div class="s-head"><h2>因為友善土地農法而有生物多樣性(環境特殊性)</h2></div>
+<div class="s-body">
+<p>大白斑蝶複育 螢火蟲複育</p>
+<p>鳥類33種 哺乳類10種 兩栖類10種 爬蟲類4種 蝴蝶類10種</p>
+<p>尋找自身的特色資源</p>
+<p>綠色體驗資源-生態</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="成果盤點">
+<section class="slide" data-title="一日遊、二日遊 加強版(固定套裝但加入季">
 <div class="s-num">15</div>
 <div class="s-inner">
-<div class="s-head"><h2>2019–2025 成果盤點與邊界分析</h2></div>
-<div class="s-grid2">
-<div class="scard" style="border-left:4px solid #1a5c2e"><h3>✅ 可以合理支持</h3><ul><li>已投入永續旅遊與循環農業多年</li><li>遊程創新受國際評選肯定（AEN·ITB）</li><li>綠色餐飲與農業管理具外部證據</li><li>跨組織合作與國際溝通能力</li><li>企業ESG合作已進入第二階段</li></ul></div>
-<div class="scard" style="border-left:4px solid #d4a01e"><h3>⚠️ 仍不能直接推定</h3><ul><li>每年碳排放量一定下降</li><li>所有原料皆為在地或有機</li><li>所有遊程都有相同教育品質</li><li>所有獎項／認證持續有效</li><li>經營績效與環境績效必然同步</li></ul></div>
+<div class="s-head"><h2>一日遊、二日遊 加強版(固定套裝但加入季節元素)</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
 </div>
-<div class="s-quote green"><strong>資料原則：</strong>每一個對外數字都要有明確負責人、資料來源、計算日期與版本紀錄。推估值必須標註「推估」及誤差範圍。</div>
 </div>
 </section>
-<section class="slide" data-title="企業ESG">
+<section class="slide" data-title="頭城農場的綠色旅遊產品分類">
 <div class="s-num">16</div>
 <div class="s-inner">
-<div class="s-head"><h2>企業ESG遊程實踐機制</h2></div>
-<div class="s-grid3">
-<div class="scard cc"><div class="sci lg">🌲</div><h3>E｜環境</h3><p>生態造林、溪流科學監測、森林與海洋保育議題，直接對應碳匯與生物多樣性。</p></div>
-<div class="scard cc"><div class="sci lg">👥</div><h3>S｜社會</h3><p>串聯農民、漁民與漁村社區廚房，帶動地方經濟與就業。</p></div>
-<div class="scard cc"><div class="sci lg">🏛️</div><h3>G｜治理</h3><p>依GSTC原則運作，透過合作夥伴與可揭露成果建立信任。</p></div>
-</div>
-<div class="s-highlight">
-<h3>企業ESG證據包交付結構</h3>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.75rem;margin-top:6px">
-<div style="text-align:center;background:#f0f7f0;padding:8px 4px;border-radius:6px"><strong>活動前</strong><br>目標·基準·風險</div>
-<div style="text-align:center;background:#f0f7f0;padding:8px 4px;border-radius:6px"><strong>活動中</strong><br>工時·數據·紀錄</div>
-<div style="text-align:center;background:#f0f7f0;padding:8px 4px;border-radius:6px"><strong>活動後</strong><br>量化·採購·滿意度</div>
-<div style="text-align:center;background:#f0f7f0;padding:8px 4px;border-radius:6px"><strong>追蹤期</strong><br>30/90/180天回訪</div>
-</div>
+<div class="s-head"><h2>頭城農場的綠色旅遊產品分類</h2></div>
+<div class="s-body">
+<p>標準行程 加強版 四季變化</p>
+<p>一日遊 二日遊</p>
+<p>「煮」傳食堂 季節限定</p>
+<p>金棗旅遊 桂竹筍旅遊 可食風景 夏令營</p>
+<p>市場拓展 友善樂齡 國際學生巿場 獎勵旅遊 電視媒體 同業觀摩</p>
+<p>專案規劃 環保署策勵營 衛生局志工表揚 國泰世華生力軍培力 宜蘭大學團隊建立</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="策略定位">
+<section class="slide" data-title="綠色體驗資源--推廣有機無毒食材">
 <div class="s-num">17</div>
 <div class="s-inner">
-<div class="s-head"><h2>策略定位句</h2></div>
-<div class="s-quote" style="font-size:1.2rem;font-style:normal;text-align:center;border-left-color:#1a5c2e;padding:20px">
-「一個讓旅客以食物、農作、森林、溪流與酒莊，<br>親身理解並參與里山永續的多日學習基地。」
-</div>
-<div class="s-grid3" style="margin-top:16px">
-<div class="scard cc"><div class="sci">👨‍👩‍👧‍👦</div><h3>對家庭</h3><p>好玩之外，帶走可在家實踐的自然與飲食行動。</p></div>
-<div class="scard cc"><div class="sci">🏢</div><h3>對學校／企業</h3><p>可被評量、揭露與延伸的環境學習及ESG專案。</p></div>
-<div class="scard cc"><div class="sci">🌏</div><h3>對國際旅客</h3><p>用可感知的在地風味與里山故事深刻理解台灣。</p></div>
+<div class="s-head"><h2>綠色體驗資源--推廣有機無毒食材</h2></div>
+<div class="s-body">
+<p>食 有機之星 美食餐廳 在地食材降低食物里程(自家菜園及鄰近三個漁港的新鮮食材)</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="北極星指標">
+<section class="slide" data-title="標準行程加強版(六、日推出)-「煮」傳食">
 <div class="s-num">18</div>
 <div class="s-inner">
-<div class="s-head"><h2>營運北極星指標</h2><p>拒絕單一「入園人次」邏輯</p></div>
-<div class="s-grid3">
-<div class="scard cc" style="border-top:3px solid #1a5c2e"><div class="sci">🌱</div><h3>環境貢獻／訪客</h3><p>每位訪客帶來的監測、復育、減廢或在地支持成果。</p></div>
-<div class="scard cc" style="border-top:3px solid #d4a01e"><div class="sci">🎯</div><h3>深度體驗率</h3><p>完成60分鐘以上核心學習體驗之訪客比例。</p></div>
-<div class="scard cc" style="border-top:3px solid #2e8b57"><div class="sci">💰</div><h3>在地價值留存</h3><p>在地採購與合作夥伴收入占相關營收比例。</p></div>
-<div class="scard cc" style="border-top:3px solid #b8860b"><div class="sci">🏡</div><h3>多日停留率</h3><p>選擇住宿或二日以上產品之訪客占比。</p></div>
-<div class="scard cc" style="border-top:3px solid #3a7d44"><div class="sci">⭐</div><h3>回訪推薦率</h3><p>會員回購、團體續約、NPS淨推薦值。</p></div>
-<div class="scard cc" style="border-top:3px solid #6a9e6a"><div class="sci">📋</div><h3>證據完整率</h3><p>可追溯至方法、期間、基準與來源的KPI比例。</p></div>
+<div class="s-head"><h2>標準行程加強版(六、日推出)-「煮」傳食堂</h2></div>
+<div class="s-body">
+<p>食</p>
 </div>
 </div>
 </section>
-<section class="slide" data-title="三年路徑">
+<section class="slide" data-title="綠色體驗資源-住宿符合綠色旅游標準">
 <div class="s-num">19</div>
 <div class="s-inner">
-<div class="s-head"><h2>三年路徑藍圖</h2></div>
-<div class="s-grid3">
-<div class="scard cc" style="border-top:4px solid #1a5c2e"><h3>Year 1｜證據化</h3><p style="font-size:.82rem">把現有案例、獎項與體驗全部轉成可追溯內容與真實KPI。</p><ul style="font-size:.78rem"><li>建立資料字典</li><li>確認原始案例真實性</li><li>選定6項基準KPI</li><li>完成證據包範本</li></ul></div>
-<div class="scard cc" style="border-top:4px solid #d4a01e"><h3>Year 2｜產品化</h3><p style="font-size:.82rem">精準形成家庭、學校、企業、國際與酒食五條清晰產品線。</p><ul style="font-size:.78rem"><li>各產品線標準作業</li><li>客群對接優化</li><li>營運儀表板上線</li><li>全流程驗證</li></ul></div>
-<div class="scard cc" style="border-top:4px solid #2e8b57"><h3>Year 3｜平台化</h3><p style="font-size:.82rem">串聯東北角農漁社群、獨立研究者與企業，輸出里山永續方法論。</p><ul style="font-size:.78rem"><li>區域生態旅遊網絡</li><li>經驗輸出與授權</li><li>國際案例發表</li><li>永續標準制定參與</li></ul></div>
+<div class="s-head"><h2>綠色體驗資源-住宿符合綠色旅游標準</h2></div>
+<div class="s-body">
+<p>住</p>
 </div>
 </div>
 </section>
-<section class="slide end" data-title="結尾">
-<div class="end-bg"></div>
-<div class="end-content">
-<h2>謝謝您的聆聽</h2>
-<p class="end-sub">從土壤到回訪，從農場到系統——讓永續成為可衡量、可體驗、可延續的價值</p>
-<div class="end-grid">
-<div class="ecard"><h4>🌿 頭城休閒農場</h4><p>宜蘭縣頭城鎮更新路125-1號<br>03-9772222<br>tcfarminfo@gmail.com<br>www.tcfarm.com.tw</p></div>
-<div class="ecard"><h4>🍷 藏酒酒莊</h4><p>宜蘭縣頭城鎮更新路126-50號<br>03-9778555<br>service@cjwine.com<br>www.cjwine.com</p></div>
-<div class="ecard"><h4>🚗 交通資訊</h4><p>國道5號頭城交流道→台2線濱海公路→梗枋橋頭轉更新路。台鐵頭城站轉計程車10分。</p></div>
+<section class="slide" data-title="行(宣導利用大眾運輸、提供接駁並推廣綠色">
+<div class="s-num">20</div>
+<div class="s-inner">
+<div class="s-head"><h2>行(宣導利用大眾運輸、提供接駁並推廣綠色交通工具)</h2></div>
+<div class="s-body">
+<p>行</p>
 </div>
-<div class="end-rep">代表人 &nbsp;<strong>卓志宏</strong></div>
-<p class="end-foot">© 2026 頭城休閒農場 &amp; 藏酒酒莊</p>
-<p class="end-foot" style="margin-top:4px;color:rgba(255,255,255,.25)">🚫 禁止酒駕 · 未滿18歲禁止飲酒</p>
 </div>
-</section></div>
-<div class="nav">
-<button class="nav-btn" id="prevBtn" onclick="go(-1)">‹</button>
-<span class="nav-counter" id="counter">1 / 21</span>
-<div class="nav-progress"><div class="nav-progress-bar" id="progressBar" style="width:0%"></div></div>
-<span class="nav-title" id="navTitle">封面</span>
-<button class="nav-btn" id="nextBtn" onclick="go(1)">›</button>
+</section>
+<section class="slide" data-title="草仔粿DIY 森林步道導覽 金桔醋DIY">
+<div class="s-num">21</div>
+<div class="s-inner">
+<div class="s-head"><h2>草仔粿DIY 森林步道導覽 金桔醋DIY 金棗親子遊 蔬果石花凍 金棗親子遊</h2></div>
+<div class="s-body">
+<p>105年綠色優質休閒農業評選 餐飲、住宿、體驗</p>
+<p>樂 育</p>
 </div>
+</div>
+</section>
+<section class="slide" data-title="年度 授獎單位 授獎內容">
+<div class="s-num">22</div>
+<div class="s-inner">
+<div class="s-head"><h2>年度 授獎單位 授獎內容</h2></div>
+<div class="s-body">
+<p>105 宜蘭縣政府 樂齡友善中心遴選</p>
+<p>105 宜蘭縣農會 綠色優質休閒農業評選 餐飲、住宿、體驗</p>
+<p>105 台灣休閒農業發展協會 服務品質認證證書 餐飲、住宿、體驗</p>
+<p>103 宜蘭縣農會 優質休閒農業評選 餐飲、住宿、體驗</p>
+<p>綠色優質休閒農業 樂齡友善中心 服務品質認證證書</p>
+<p>近期外界的肯定</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="時間 社會參與內容">
+<div class="s-num">23</div>
+<div class="s-inner">
+<div class="s-head"><h2>時間 社會參與內容</h2></div>
+<div class="s-body">
+<p>105.10 獲環保署105年環教中心評鑑優異</p>
+<p>105.11 為獨居老人募物資及暖心市集</p>
+<p>105.12 為頭城聖芳濟老人中心辦年味菜</p>
+<p>105.09 宜蘭特教中心體驗</p>
+<p>105.06 宜蘭自閉症協會體驗</p>
+<p>104.05 頭城特教學校</p>
+<p>環保署105年環教中心評鑑優異 暖心市集 老人中心辦年味菜 宜蘭特教中心體驗</p>
+<p>社會參與加強品牌形象</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="六塊水田可以如何運用?">
+<div class="s-num">24</div>
+<div class="s-inner">
+<div class="s-head"><h2>六塊水田可以如何運用?</h2></div>
+<div class="s-body">
+<p>如何傳遞永續農業精神 愛物惜物的農村價值?</p>
+<p>水稻文化多元運用</p>
+<p>六塊水田可以如何運用?</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="搓草繩-物盡其用 古農具-脫榖體驗 曬稻">
+<div class="s-num">25</div>
+<div class="s-inner">
+<div class="s-head"><h2>搓草繩-物盡其用 古農具-脫榖體驗 曬稻榖-豐收的喜悅 親近土地-插秧體驗 割稻-豐收的喜悅 推石磨體驗 米食製作體驗 米食製作體驗</h2></div>
+<div class="s-body">
+<p>水稻文化多元運用</p>
+<p>從土地生產到米食文化的完整體驗-傳遞永續農業精神 愛物惜物的農村價值</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="以插秧體驗活動，拉近學員與土地的距離；米">
+<div class="s-num">26</div>
+<div class="s-inner">
+<div class="s-head"><h2>以插秧體驗活動，拉近學員與土地的距離；米食製作體驗活動傳承傳統飲食文化；農具體驗活動培養知足惜福及友善環境的價值觀。</h2></div>
+<div class="s-body">
+<p>環境教育 育</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="育 環境教育">
+<div class="s-num">27</div>
+<div class="s-inner">
+<div class="s-head"><h2>育 環境教育</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="推石磨 古農具介紹 插秧 跳草繩 鬆土做">
+<div class="s-num">28</div>
+<div class="s-inner">
+<div class="s-head"><h2>推石磨 古農具介紹 插秧 跳草繩 鬆土做畦 紅鳳菜阡插 植物解說 希望盆栽 有機菜園巡禮</h2></div>
+<div class="s-body">
+<p>農藝復興 稻草人DIY 希望家園 水稻文化教案 三生有幸教案 農藝復興教案</p>
+<p>環境教育課程方案</p>
+<p>育 環境教育</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="有機蔬菜園: 特色資源綜合運用">
+<div class="s-num">29</div>
+<div class="s-inner">
+<div class="s-head"><h2>有機蔬菜園: 特色資源綜合運用</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="有機菜園巡禮">
+<div class="s-num">30</div>
+<div class="s-inner">
+<div class="s-head"><h2>有機菜園巡禮</h2></div>
+<div class="s-body">
+<p>在土地上不使用農藥、化肥來種植農作物,使環境的生態平衡,土地能永續利用,如果農地取得有機認證標章就好像為農產品取得有機身份證</p>
+<p>適時適地輪作間作 選擇抗病蟲害品種 紅蜘蛛、瓢蟲、青蛙、鳥吃蟲、寄生蜂會在蟲卵中下蛋、用稻草人嚇鳥</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="菜園多元運用-有機菜園巡禮 現場採購">
+<div class="s-num">31</div>
+<div class="s-inner">
+<div class="s-head"><h2>菜園多元運用-有機菜園巡禮 現場採購</h2></div>
+<div class="s-body">
+<p>參訪目的 介紹蔬菜的種類、認識食材營養及如何烹煮、協助現場採購蔬菜。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="從價格到價值的轉化(有機蔬菜園)">
+<div class="s-num">32</div>
+<div class="s-inner">
+<div class="s-head"><h2>從價格到價值的轉化(有機蔬菜園)</h2></div>
+<div class="s-body">
+<p>營運項目 應用 價值提昇效益</p>
+<p>農作物生產 自家餐廳使用(藏酒酒莊、頭城農場) 鄰近鄉鎮3個小學營養午餐食材 DIY材料(紫蘇醋、醋醃小黃瓜、空心菜盆栽) 新鮮、美味、親眼看到的安心、款待好友的心意 彰顯社會責任 傳遞農業價值</p>
+<p>種植體驗 大學餐飲系學生體驗 小學夏令營從種植到收獲到分享的歷程 參與生產與生活的食農教育 小孩的獨立、父母的驕傲</p>
+<p>打工換宿 透過WWOOF協助國外朋友到農場做義工 讓國際社會了解有機生活，讓大眾更貼農場的脈動。</p>
+<p>菜園導覽 來訪遊客體驗採摘、現場買菜 知識獲得、滿足食安與購物需求 蔬菜1斤多少錢?</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="抱冬瓜比賽 稱重猜謎 刨皮 曬冬瓜 切丁">
+<div class="s-num">33</div>
+<div class="s-inner">
+<div class="s-head"><h2>抱冬瓜比賽 稱重猜謎 刨皮 曬冬瓜 切丁 熬糖 裝罐 包裝</h2></div>
+<div class="s-body">
+<p>菜園多元運用-食農教育夏令營 有畫面又有意義的冬瓜醬製作</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="穆斯林友善餐飲、友善旅遊及旅館服務認證">
+<div class="s-num">34</div>
+<div class="s-inner">
+<div class="s-head"><h2>穆斯林友善餐飲、友善旅遊及旅館服務認證</h2></div>
+<div class="s-body">
+<p>市場拓展-穆斯林市場</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="市場拓展-節目採訪(藝人來我家~~~馬來">
+<div class="s-num">35</div>
+<div class="s-inner">
+<div class="s-head"><h2>市場拓展-節目採訪(藝人來我家~~~馬來西亞蘇盈之)</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="市場拓展-節目拍攝(五味八珍)">
+<div class="s-num">36</div>
+<div class="s-inner">
+<div class="s-head"><h2>市場拓展-節目拍攝(五味八珍)</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="市場拓展-節目拍攝(含笑食堂)">
+<div class="s-num">37</div>
+<div class="s-inner">
+<div class="s-head"><h2>市場拓展-節目拍攝(含笑食堂)</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="2015 小農夫的大地廚房">
+<div class="s-num">38</div>
+<div class="s-inner">
+<div class="s-head"><h2>2015 小農夫的大地廚房</h2></div>
+<div class="s-body">
+<p>2016 食農小達人</p>
+<p>2017 食驗小學堂</p>
+<p>菜園多元運用-食農教育夏令營</p>
+<p>從每個活動單元都與食、農、環境主題相扣</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="里山食作小鋪">
+<div class="s-num">39</div>
+<div class="s-inner">
+<div class="s-head"><h2>里山食作小鋪</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="里山食作小鋪">
+<div class="s-num">40</div>
+<div class="s-inner">
+<div class="s-head"><h2>里山食作小鋪</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="放牧雞蛋與百香果 里山小點">
+<div class="s-num">41</div>
+<div class="s-inner">
+<div class="s-head"><h2>放牧雞蛋與百香果 里山小點</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="芭蕉培根與百花蜜">
+<div class="s-num">42</div>
+<div class="s-inner">
+<div class="s-head"><h2>芭蕉培根與百花蜜</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="蝶荳花飲與金桔">
+<div class="s-num">43</div>
+<div class="s-inner">
+<div class="s-head"><h2>蝶荳花飲與金桔</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="長菜豆與紫蘇醋">
+<div class="s-num">44</div>
+<div class="s-inner">
+<div class="s-head"><h2>長菜豆與紫蘇醋</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="名稱 形式 執行時間 可執行人數 可執行">
+<div class="s-num">45</div>
+<div class="s-inner">
+<div class="s-head"><h2>名稱 形式 執行時間 可執行人數 可執行地點 備註</h2></div>
+<div class="s-body">
+<p>農村食坊 廚藝教學,上完之後每人要會煮一道飲料、一道主菜、3道副餐 目前訂:主食(義大利水餃)、副餐(鴨賞蔬菜捲、蝶豆花石花凍、金棗丸子湯)、飲品(金桔茶) 2HR(含用餐) 最少20人最多30人 戶外廚房水稻田 4-6人一組 宜休農推廣香港市場(@1500)</p>
+<p>共煮共食 共煮共食體驗 香椿水餃、金棗丸子湯、雞蛋布丁、蔬菜捲 2H(含用餐) 30-80人 戶外廚房水稻田(80人) 8-10人一組 環教教案名稱:永續的一餐 佛大:孝親旅遊(@1200)</p>
+<p>里山Brunch 用在地、當令食材手拿小點心 20-30分鐘 30-40人 戶外廚房 +200</p>
+<p>里山下午茶 用在地、當令食材手拿小點心 20-30分鐘 30-40人 戶外廚房 +200</p>
+<p>大地食堂(午餐) 大地食堂(晚餐) 不下廚,直接吃中餐或晚餐 1.5HR 30-40人 戶外廚房 (@1200)</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="投影片 46">
+<div class="s-num">46</div>
+<div class="s-inner">
+<div class="s-head"><h2>投影片 46</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="投影片 47">
+<div class="s-num">47</div>
+<div class="s-inner">
+<div class="s-head"><h2>投影片 47</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="投影片 48">
+<div class="s-num">48</div>
+<div class="s-inner">
+<div class="s-head"><h2>投影片 48</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">49</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">50</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊源起</p>
+<p>2002年臺灣加入WTO開放民間釀酒</p>
+<p>2003年SARS疫情來襲,農場遊客人數驟減</p>
+<p>西元2006年雪山隧道通車，當年11月7日起 藏酒酒莊 正式營運</p>
+<p>將農產(500棵金棗樹)加工可跳脫農產品不能保存限制而且越久越有價值</p>
+<p>政府與各大專院校協助轉型，同時參與政府計畫，提升技術及內涵</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="以環保、生態、綠建築為概念，利用雪山純淨">
+<div class="s-num">51</div>
+<div class="s-inner">
+<div class="s-head"><h2>以環保、生態、綠建築為概念，利用雪山純淨水源及在地生產的農產品，成立台灣第一家"農業生產+釀酒加工+體驗休閒(知識、技能、休閒及品味綠生活)"的農村酒莊</h2></div>
+<div class="s-body">
+<p>將在地農產品升級再利用，結合體驗行銷，打造六級化產業服務。</p>
+<p>營運模式</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">52</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>農村酒莊特性</p>
+<p>農村酒莊係兼具農產加工及鄉村旅遊之事業</p>
+<p>農產加工 鄉村旅遊</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">53</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>農村酒莊差異化 & 多角化經營</p>
+<p>農業生產 農產品加工 農村酒莊 觀光工廠 農場 休閒農場 農村旅遊 農村體驗 戶外教學 環境教育 有機農業</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">54</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊融入元素</p>
+<p>原料生產 釀製過程 佳醇品嚐 特色美食 地方人文(故事化詮釋) 鄉野休旅 建築風格</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">55</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊特性</p>
+<p>看得 到 觸摸得到 食用 得到 真實體驗 提供遊客 知性 情感 文化 紅麴菌生</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">56</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>發展策略</p>
+<p><strong>◆區隔進口酒品之地緣疏離感，營造台灣農村酒莊人文情境</strong></p>
+<p><strong>◆從酒莊營運、釀酒技術養成到酒莊經營效率及酒品品質發展</strong></p>
+<p><strong>◆「在地酒品」之品牌形象建設</strong></p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">57</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>提升農業經營層次</p>
+<p><strong>◆藉由獨特的建築風格、溫馨明亮的裝置、開放的廠區與釀酒設備及細膩樸實的服務，</strong></p>
+<p><strong>◆酒莊經營已從農產品生產、銷售及餐飲供應等有形的滿足層次，晉升為提供視覺、味覺、嗅覺及精神文化等無形的享受境界，用說故事的行銷手法，呈現地理、文化、農業環境與感情，</strong></p>
+<p><strong>◆給予消費者獲得豐富的知性之旅，此產業轉型經營模式，可作為農業相關產業發展參考。</strong></p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="經濟價值遞進圖">
+<div class="s-num">58</div>
+<div class="s-inner">
+<div class="s-head"><h2>經濟價值遞進圖</h2></div>
+<div class="s-body">
+<p>初級農產品 文創商品提供 體驗活動提供 販賣服務提供 農產品制造加工</p>
+<p>無差異化 差異化 市價 高於市價 市場競爭 價格定位</p>
+<p>金棗1斤15元 龜山朝日一瓶480元 水果酒一瓶250元</p>
+<p>藏酒酒莊的優勢-開發文創商品的創造經濟新價值。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">59</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊觀光旅遊標的</p>
+<p>結合在地資源串流: 蘭陽博物館.外澳海灘.梗枋海鮮一條街.頭城農場.外澳民宿群聚.東北角海岸風景特定區</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="結合地方共同發展-新港澳觀光特區">
+<div class="s-num">60</div>
+<div class="s-inner">
+<div class="s-head"><h2>結合地方共同發展-新港澳觀光特區</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="投影片 61">
+<div class="s-num">61</div>
+<div class="s-inner">
+<div class="s-head"><h2>投影片 61</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">62</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>產業形象及體驗行銷</p>
+<p>產業形象 面對資源雄厚的國際酒業集團及國內大型酒廠廣告行銷，農糧署以產業整體形象為主體，集中資源辦理靜態與動態行銷，採用報章及旅遊、飲食等消費性雜誌、年鑑等辦理酒莊及酒品推廣系列廣告與專題報導、刊登發行；參加國內大型旅遊展、食品展；舉辦農村酒莊巡禮推廣活動及農村酒莊暨酒品評鑑成果發表會。</p>
+<p>酒莊形象 從產地到餐桌 用包裝和品牌進入實體流通 體驗活動與休閒旅遊推廣</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">63</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p><strong>◆101年宜蘭縣地方產業創新研發推動計畫 深層海水紅麴紫蘇有機醋量化生產先期研究計畫</strong></p>
+<p><strong>◆102年宜蘭縣地方產業創新研發推動計畫 蘭陽特有作物鮮釀花果醋量化生產研發計畫</strong></p>
+<p>深層海水紅麴紫蘇醋 紅酒醋 白酒醋 紫蘇醋 梅子醋 金桔醋</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">64</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p>自93年至96年止，農糧署已完成「研究開發農產品之加工技術」科技研究21項、產學合作2項，及「建構現代化農產品行銷體系與制度之研究」2項。</p>
+<p>藏酒產學合作 金棗酒產品研發 在地食材與餐酒的開發結合</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">65</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p>數位陶瓷酒品3D快速打樣暨文創設計開發計畫</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">66</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p>數位陶瓷酒器RFID防偽文創加值應用</p>
+<p>「數位陶瓷酒器」結合了RFID防偽文創加值應用，讓這款具有宜蘭縣本土風味的地酒，和別的酒不一樣了，「它」有了自己獨一無二，無法取代的「數位身份證」，有了RFID這張身份證，不但具有防偽辨識功能，更增加了價值感。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">67</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p>103年度「六級產業輔導」宜蘭風商品研發-鹽麴</p>
+<p>採用友善、無毒、有機食材製成，具宜蘭特色之食品伴手禮、產品。酒莊擁有來自雪山山脈的山泉水，嚴選三星有機米製作米酒，將過程產生的副產物-酒粕加以利用製成低鈉健康的鹽麴。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">68</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>政府相關計畫專案</p>
+<p><strong>◆宜蘭縣政府100年度地方產業發展基金宜蘭創意體驗觀光產業發展計畫</strong></p>
+<p>藏酒粕金包 紅酒蕃茄</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">69</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊 服務項目</p>
+<p>景觀/生態/休閒/體驗 釀酒/品酒/品酩/紀念/饋禮 餐飲/特色美食/農產/精緻加工 訂席/活動/團體/客製化服務</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">70</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒酒莊體驗特色</p>
+<p>綠活景觀 綠建材_環教應用</p>
+<p>自然生態 水循環_營造共生共榮生態</p>
+<p>酒窖巡訪 東西方酒國文化</p>
+<p>釀酒工藝 家家酒生活應用</p>
+<p>體驗行程 農情採果趣 麴菌釀酒行</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">71</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="自然生態 酒窖巡訪 生態">
+<div class="s-num">72</div>
+<div class="s-inner">
+<div class="s-head"><h2>自然生態 酒窖巡訪 生態</h2></div>
+<div class="s-body">
+<p>酒莊的優勢 自然景觀與建築設計</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="酒莊的優勢 自然景觀與建築設計">
+<div class="s-num">73</div>
+<div class="s-inner">
+<div class="s-head"><h2>酒莊的優勢 自然景觀與建築設計</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="酒莊的優勢 自然景觀與建築設計">
+<div class="s-num">74</div>
+<div class="s-inner">
+<div class="s-head"><h2>酒莊的優勢 自然景觀與建築設計</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="自然景觀與建築設計">
+<div class="s-num">75</div>
+<div class="s-inner">
+<div class="s-head"><h2>自然景觀與建築設計</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒山林咖啡環境">
+<div class="s-num">76</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒山林咖啡環境</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒宴館用餐環境">
+<div class="s-num">77</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒宴館用餐環境</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊DIY體驗活動典範">
+<div class="s-num">78</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊DIY體驗活動典範</h2></div>
+<div class="s-body">
+<p>金棗果園自然農情 鮮果三吃.蜜釀二吃 金棗成份與應用</p>
+<p>結合釀酒.品酒.調酒</p>
+<p>一級農產品 二級加工 三級行銷</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊冬季DIY體驗活動">
+<div class="s-num">79</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊冬季DIY體驗活動</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊-DIY體驗活動">
+<div class="s-num">80</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊-DIY體驗活動</h2></div>
+<div class="s-body">
+<p>(冬季)幸福甜酒釀 (秋季)酒漬釀紅寶 (冬季)甜蜜蜜金棗 另可加採果體驗</p>
+<p>紅酒釀番茄 酒漬紅寶</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊-DIY體驗活動">
+<div class="s-num">81</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊-DIY體驗活動</h2></div>
+<div class="s-body">
+<p>藏酒柏金包 愛情釀的酒 (春季)酒漬愛情果 (春季)酒梅果醬DIY (夏季)白玉珍珠 (夏季)粉紅調酒</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="4~6月 螢火蟲生態小旅行">
+<div class="s-num">82</div>
+<div class="s-inner">
+<div class="s-head"><h2>4~6月 螢火蟲生態小旅行</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊 一日遊/半日遊">
+<div class="s-num">83</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊 一日遊/半日遊</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊夏季午後輕食套裝">
+<div class="s-num">84</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊夏季午後輕食套裝</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊節氣活動">
+<div class="s-num">85</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊節氣活動</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊秋蟹餐酒搭配">
+<div class="s-num">86</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊秋蟹餐酒搭配</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒酒莊秋蟹搭配天仙果鍋物">
+<div class="s-num">87</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒酒莊秋蟹搭配天仙果鍋物</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="燒酒雞 藏酒米酒 主廚取[藏酒米酒]加入">
+<div class="s-num">88</div>
+<div class="s-inner">
+<div class="s-head"><h2>燒酒雞 藏酒米酒 主廚取[藏酒米酒]加入温性養生葯材泡製為料理湯底 花蓮契約養殖的[放山雞]肉質Q甜 經過灼燒沸沸 湯內鮮蔬也是滿滿酒香鮮甜</h2></div>
+<div class="s-body">
+<p>藏酒No.1特色餐---聞香即醉燒酒雞</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="獨家手創麵包雞 藏酒 指定菜">
+<div class="s-num">89</div>
+<div class="s-inner">
+<div class="s-head"><h2>獨家手創麵包雞 藏酒 指定菜</h2></div>
+<div class="s-body">
+<p>藏酒No.1指定餐-藏酒麵包雞 [花蓮契約養殖]土雞 藏酒米酒細細SPA升級為酒香馬殺雞 酒香馬殺雞肚填了滿滿主廚美味食材 麵衣封了酒香指定雞 經過6小時烤爐烘焙 就是客人讚嘆不已的內嫩外酥的酒香、麴香、果香 滿滿超絶味道</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="餐、品酒與音樂結合、創造典雅氣氛">
+<div class="s-num">90</div>
+<div class="s-inner">
+<div class="s-head"><h2>餐、品酒與音樂結合、創造典雅氣氛</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">91</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>餐、品酒與音樂結合、創造典雅氣氛</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="農特產品大部分可作為釀酒原料來源，雖無法">
+<div class="s-num">92</div>
+<div class="s-inner">
+<div class="s-head"><h2>農特產品大部分可作為釀酒原料來源，雖無法以收購製酒為農產品產銷失衡時的解決手段，但酒莊對於製酒原料品質要求嚴格，願以較高價格收購，以藏酒而言，收購宜蘭在地三星契作192號白米，做為穀類蒸餾酒原料及以高價收購花蓮富里品質優良釀酒用黃熟梅，間接促使近3年黃熟梅價格維持每公斤30元以上，有助於提昇地區性農特產品品質及價格。</h2></div>
+<div class="s-body">
+<p>收購質優、在地契作農產釀造酒/醋</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="龜山朝日(金棗酒) Turtle Isl">
+<div class="s-num">93</div>
+<div class="s-inner">
+<div class="s-head"><h2>龜山朝日(金棗酒) Turtle Island Sunrise</h2></div>
+<div class="s-body">
+<p>整體設計以簡潔純淨為主來提升藏酒金棗酒的最高品質，讓龜山朝日金棗酒成為能夠代表臺灣宜蘭文化的最佳伴手禮，讓宜蘭的純淬美好能夠輕易的傳遞出去表現出美好的臺灣文化。</p>
+<p>開發文創商品的創造經濟新價值</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="紅麴的故鄉在宜蘭">
+<div class="s-num">94</div>
+<div class="s-inner">
+<div class="s-head"><h2>紅麴的故鄉在宜蘭</h2></div>
+<div class="s-body">
+<p>開發文創商品的創造經濟新價值</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="107年度農村酒莊評鑒，取得優級農村酒莊">
+<div class="s-num">95</div>
+<div class="s-inner">
+<div class="s-head"><h2>107年度農村酒莊評鑒，取得優級農村酒莊。</h2></div>
+<div class="s-body">
+<p>「農民自營」酒莊，因家數眾多，分散各地，且經營規模及專業水準參差不齊，目前以教育訓練來建立其釀酒技術及制酒法規等知能。</p>
+<p>2018年農村酒莊評鑒優等</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="106年度農村美酒評鑒，藏酒白葡萄酒取得">
+<div class="s-num">96</div>
+<div class="s-inner">
+<div class="s-head"><h2>106年度農村美酒評鑒，藏酒白葡萄酒取得農村美酒銅牌獎。</h2></div>
+<div class="s-body">
+<p>12家農村酒莊採用當地優質安全水果與農特產品為原料，釀造「純」、「優」的農村美酒，促使酒莊業者改良精進釀酒技藝，評鑑獲獎的酒品均經過專業品酒師嚴格感官評定</p>
+<p>2017年度農村美酒評鑑</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="農糧署自93年起推動實施「農業組織型」酒">
+<div class="s-num">97</div>
+<div class="s-inner">
+<div class="s-head"><h2>農糧署自93年起推動實施「農業組織型」酒莊與酒品評鑒制度，且挹注資源輔導提升酒莊經營與釀酒技術及加強優質形象行銷推廣等相關工作。</h2></div>
+<div class="s-body">
+<p>102年度12家酒莊評鑒，取得優質農村酒莊。</p>
+<p>「農民自營」酒莊，因家數眾多，分散各地，且經營規模及專業水準參差不齊，目前以教育訓練來建立其釀酒技術及制酒法規等知能。</p>
+<p>CAS農村酒莊評鑒 農村酒莊評鑒優等</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="101年SBIR科技創新–深層海水紅麴紫">
+<div class="s-num">98</div>
+<div class="s-inner">
+<div class="s-head"><h2>101年SBIR科技創新–深層海水紅麴紫蘇醋量化生產</h2></div>
+<div class="s-body">
+<p>深層海水+紅麴紫蘇醋 菌種培養、產能提昇25%</p>
+<p>農村酒莊評鑒優等</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="可利用釀酒原料 米麴">
+<div class="s-num">99</div>
+<div class="s-inner">
+<div class="s-head"><h2>可利用釀酒原料 米麴</h2></div>
+<div class="s-body">
+<p>以釀酒原料帶動體驗活動以及商品銷售</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="以釀酒原料帶動體驗活動以及商品銷售">
+<div class="s-num">100</div>
+<div class="s-inner">
+<div class="s-head"><h2>以釀酒原料帶動體驗活動以及商品銷售</h2></div>
+<div class="s-body">
+<p>拌麴 可利用釀酒原料 蒸米 甘酒 濕鹽麴</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="可利用釀材原料 酒粕">
+<div class="s-num">101</div>
+<div class="s-inner">
+<div class="s-head"><h2>可利用釀材原料 酒粕</h2></div>
+<div class="s-body">
+<p>製酒過程中被濾掉的渣渣 極高的營養成分，100g酒粕含有相當於2顆蛋的蛋白質、5顆蘋果的B2、15顆檸檬的維他命B1、1個番茄的葉酸 200CC牛奶的肌醇</p>
+<p>運用金棗酒粕餐包、紅麴養生麵包 酒粕XO醬</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="紅麴菌生 天然色素.紅麴介紹 紅麴美食 ">
+<div class="s-num">102</div>
+<div class="s-inner">
+<div class="s-head"><h2>紅麴菌生 天然色素.紅麴介紹 紅麴美食 降低膽固醇</h2></div>
+<div class="s-body">
+<p><strong>應用 主題體驗:</strong>紅麴菌生麴食體驗</p>
+<p>酒品延伸發展的體驗活動</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="十一道在地食材 食冢感官享受 極鮮極藝">
+<div class="s-num">103</div>
+<div class="s-inner">
+<div class="s-head"><h2>十一道在地食材 食冢感官享受 極鮮極藝</h2></div>
+<div class="s-body">
+<p>擁抱海洋資源 享受山產時蔬</p>
+<p>坐落在山水之中 融入由山林孕育的甘醇酒品</p>
+<p>主廚親赴鄰近海港挑選當日食材 每日食蔬運用新鮮時令山產 搭配酒莊自栽有機鮮美蔬果</p>
+<p>食冢-家與山海的味道</p>
+<p>藏山味 酒醒味 創刺食 意海味 品舒美 手品鮮 作鮮湯 食岩燒 冢穀物 料恬品 理緩飲</p>
+<p>藏酒無菜單料理</p>
+<p>以特色餐飲帶動服務及商品銷售 9菜1甜品1飲</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="以餐酒特色餐飲帶動服務及商品銷售">
+<div class="s-num">104</div>
+<div class="s-inner">
+<div class="s-head"><h2>以餐酒特色餐飲帶動服務及商品銷售</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="以餐酒特色餐飲帶動服務及商品銷售">
+<div class="s-num">105</div>
+<div class="s-inner">
+<div class="s-head"><h2>以餐酒特色餐飲帶動服務及商品銷售</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒創意手作料理 十種在地料理 擁抱海洋">
+<div class="s-num">106</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒創意手作料理 十種在地料理 擁抱海洋恩惠、享受山產時蔬 感受家山海的味道</h2></div>
+<div class="s-body">
+<p>以餐酒特色餐飲帶動服務及商品銷售</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="春梅、夏葡、秋米、冬棗">
+<div class="s-num">107</div>
+<div class="s-inner">
+<div class="s-head"><h2>春梅、夏葡、秋米、冬棗</h2></div>
+<div class="s-body">
+<p>因為水好，所以釀成美酒入甕</p>
+<p>因為山美，所以四季美景入畫</p>
+<p>因為要珍藏美好時光</p>
+<p>歡迎 漫遊 藏酒酒莊</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="釀造酒/3款 蒸餾酒/3款 再製酒/4款">
+<div class="s-num">108</div>
+<div class="s-inner">
+<div class="s-head"><h2>釀造酒/3款 蒸餾酒/3款 再製酒/4款 禮盒組/2款</h2></div>
+<div class="s-body">
+<p>藏酒系列</p>
+<p>酒莊的產品</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒系列-釀造酒">
+<div class="s-num">109</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒系列-釀造酒</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+<p><strong>白酒 :</strong> 750ml 12.5% NT380</p>
+<p><strong>紅酒 :</strong> 750ml 12.5% NT380</p>
+<p><strong>典藏紅酒:</strong> 750ml 12.5% NT680</p>
+<p>彰化二林-黑后葡萄/金香葡萄</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒系列-蒸餾酒">
+<div class="s-num">110</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒系列-蒸餾酒</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+<p><strong>米酒 :</strong> 600ml 20% NT100</p>
+<p><strong>鼓舞38:</strong> 550ml 38% NT480</p>
+<p><strong>鼓舞52:</strong> 550ml 52% NT680</p>
+<p>宜蘭三星192號稻米、雪山好水</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒系列-再製酒">
+<div class="s-num">111</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒系列-再製酒</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+<p><strong>梅子酒 :</strong> 375ml 18% NT330</p>
+<p><strong>金棗酒 :</strong> 375ml 12% NT280</p>
+<p><strong>龜山朝日金棗酒:</strong> 330ml 8% NT480</p>
+<p><strong>藏仙紅麴酒:</strong> 550ml 18% NT990</p>
+<p>花蓮富里-黃熟梅、自種金棗、台灣天仙果、宜蘭紅麴</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏酒系列-禮品組">
+<div class="s-num">112</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏酒系列-禮品組</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+<p><strong>紀念酒組:</strong> 50ml*5 NT500</p>
+<p><strong>喜漾珍寶:</strong> 900ml*2 NT5,200</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="鹽麴/4款 佐醬/3款 原醋/5款">
+<div class="s-num">113</div>
+<div class="s-inner">
+<div class="s-head"><h2>鹽麴/4款 佐醬/3款 原醋/5款</h2></div>
+<div class="s-body">
+<p>藏私系列</p>
+<p>酒莊的產品</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="梅子 原味 黑胡椒 芥末">
+<div class="s-num">114</div>
+<div class="s-inner">
+<div class="s-head"><h2>梅子 原味 黑胡椒 芥末</h2></div>
+<div class="s-body">
+<p>藏私系列-鹽麴 55g NT180</p>
+<p>酒莊的產品</p>
+<p>藏酒為符合現代人需求的便利性，開發出乾鹽麴，使料理更加方便，或可當成佐料沾粉方便食用，鹽麴粉健康且養生，又可增添風味，是美味佳餚的好幫手。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏私系列-鹽麴 55g NT180">
+<div class="s-num">115</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏私系列-鹽麴 55g NT180</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏私系列-佐醬">
+<div class="s-num">116</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏私系列-佐醬</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+<p><strong>紅麴醬:</strong> 215g*2 NT300</p>
+<p><strong>蜜金棗:</strong> 225g*2 NT300</p>
+<p><strong>櫻花蝦XO醬:</strong> 350g*2 NT600</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="藏私系列-紅白酒醋">
+<div class="s-num">117</div>
+<div class="s-inner">
+<div class="s-head"><h2>藏私系列-紅白酒醋</h2></div>
+<div class="s-body">
+<p>酒莊的產品</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="金桔醋、青梅醋、紫蘇醋: 250ml N">
+<div class="s-num">118</div>
+<div class="s-inner">
+<div class="s-head"><h2>金桔醋、青梅醋、紫蘇醋: 250ml NT280</h2></div>
+<div class="s-body">
+<p>藏私系列-原醋</p>
+<p>酒莊的產品</p>
+<p>採用藏酒安全栽種的金桔、有機紫蘇、花蓮富里青梅搭配精釀糯米醋，依循古法純手工釀造而成，為完整的呈現天然風味，每瓶醋均於瓶中熟成滿一年後才貼標販售，口感濃郁爽口，清新的風味讓人讚不絕口。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="茶樹蕁麻葉精油 紅酒多酚精油 迷迭香薄荷">
+<div class="s-num">119</div>
+<div class="s-inner">
+<div class="s-head"><h2>茶樹蕁麻葉精油 紅酒多酚精油 迷迭香薄荷精油 香茅薄荷精油 櫻花香氛 香蜂米酒粕</h2></div>
+<div class="s-body">
+<p>藏好系列-手工皂-110g NT250</p>
+<p>酒莊的產品</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">120</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>能力表現與獎項</p>
+<p>2006年 成立藏酒酒莊 宜蘭縣民間自營第一家以綠建築概念的酒莊</p>
+<p>研發出全台第一支100%純釀工序的金棗酒</p>
+<p>嬋連評選為2014年CAS優級農村酒莊</p>
+<p>餐飲業優良服務GSP認証</p>
+<p>2011年英文服務金質級認証</p>
+<p>製酒觀光工廠</p>
+<p>台灣百大觀光特產認証</p>
+<p>微笑台灣聯盟</p>
+<p>嬋連2012年休閒農莊服務品質認証</p>
+<p>2014年幸福宜蘭 拾在好禮</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">121</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒名人榜</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">122</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒名人榜</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">123</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒名人榜</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">124</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 媒體報導</p>
+<p>旅行應援團 瘋台灣</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="觀光局媒體團(2018年) 藏酒報導評論">
+<div class="s-num">125</div>
+<div class="s-inner">
+<div class="s-head"><h2>觀光局媒體團(2018年) 藏酒報導評論</h2></div>
+<div class="s-body">
+<p style="color:#999;text-align:center;padding:20px">（圖片頁）</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="魔法料理師(2014年) 壹電視節目(2">
+<div class="s-num">126</div>
+<div class="s-inner">
+<div class="s-head"><h2>魔法料理師(2014年) 壹電視節目(2014年)</h2></div>
+<div class="s-body">
+<p>藏酒電視節目專題</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="(2015年) 360行向前衝節目 壹週">
+<div class="s-num">127</div>
+<div class="s-inner">
+<div class="s-head"><h2>(2015年) 360行向前衝節目 壹週刊拍攝節目(2015年)</h2></div>
+<div class="s-body">
+<p>藏酒電視節目專題</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="三立-TLC頻道-瘋台灣全明星(2015">
+<div class="s-num">128</div>
+<div class="s-inner">
+<div class="s-head"><h2>三立-TLC頻道-瘋台灣全明星(2015年) 非凡新聞–美食探索(2015年)</h2></div>
+<div class="s-body">
+<p>藏酒電視節目專題</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="觀光局局長參訪(2018年) 日本媒體以">
+<div class="s-num">129</div>
+<div class="s-inner">
+<div class="s-head"><h2>觀光局局長參訪(2018年) 日本媒體以及日本部落客(2015年)</h2></div>
+<div class="s-body">
+<p>藏酒旅遊社群探訪</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="交通部觀光局長參訪(2018年11月22">
+<div class="s-num">130</div>
+<div class="s-inner">
+<div class="s-head"><h2>交通部觀光局長參訪(2018年11月22日)</h2></div>
+<div class="s-body">
+<p>藏酒旅遊社群探訪</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="交通部觀光局長參訪(2018年11月22">
+<div class="s-num">131</div>
+<div class="s-inner">
+<div class="s-head"><h2>交通部觀光局長參訪(2018年11月22日)</h2></div>
+<div class="s-body">
+<p>藏酒旅遊社群探訪</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">132</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 媒體報導</p>
+<p>壹週刊</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">133</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 媒體報導</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">134</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 媒體報導</p>
+<p>Taipei Walker 美味餐廳</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">135</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 旅展 2018美酒展 美食展 台北希望廣場</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">136</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 旅展 美酒展 美食展 廈門文博展</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">137</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 旅展 美酒展 美食展 廈門文博展</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">138</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 旅展 美酒展 美食展 廈門文博展</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">139</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>藏酒花絮 旅展 美酒展 美食展 廈門文博展</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">140</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>結語</p>
+<p>善用在地資源，維護生態環境，創造良性循環。</p>
+<p>深耕在地特色，發展獨特性與差異化。</p>
+<p>符合綠色環保趨勢，多元化發展體驗活動與商品。</p>
+<p>透過深度的體驗活動引發生命的感動，吸引更多人走出教室與都市。</p>
+<p>將農產品變商品，塑立品牌形象，跳脫氣候風險與農產品保存限制，增加營收。</p>
+<p>因應時代變化，不斷創新研發，滿足顧客需求。</p>
+<p>以熱情投入休閒農業，以人和創造團隊。</p>
+</div>
+</div>
+</section>
+<section class="slide" data-title="【藏酒 酒莊】電話:03-9778-55">
+<div class="s-num">141</div>
+<div class="s-inner">
+<div class="s-head"><h2>【藏酒 酒莊】電話:03-9778-555 地址:宜蘭縣頭城鎮更新里126-50號</h2></div>
+<div class="s-body">
+<p>謝謝聆聽</p>
+</div>
+</div>
+</section>
+<div class="slide-nav">
+<button onclick="prevSlide()">&#9664;</button>
+<span class="pi" id="pageInfo">1 / 141</span>
+<button onclick="nextSlide()">&#9654;</button>
 </div>
 <script>
-(function(){
-var t=document.getElementById('track'),s=t.children,N=s.length;
-var T=['封面','核心判讀','基本資料','里山系統','價值鏈','八大客群','護城河','六大營運系統','森林餐桌','循環農業','環教與旅宿','酒莊五種角色','酒莊體驗八問','酒莊價值鏈','農村酒莊二日','成果盤點','企業ESG遊程','策略定位','北極星指標','三年路徑','結尾'];
-var c=0;
-function u(){t.style.transform='translateX(-'+(c*100)+'%)';document.getElementById('counter').textContent=(c+1)+' / '+N;document.getElementById('progressBar').style.width=((c+1)/N*100)+'%';document.getElementById('navTitle').textContent=T[c]||'';document.getElementById('prevBtn').disabled=c===0;document.getElementById('nextBtn').disabled=c===N-1;}
-function g(d){var n=c+d;if(n<0||n>=N)return;c=n;u()}
-document.getElementById('prevBtn').onclick=function(){g(-1)};
-document.getElementById('nextBtn').onclick=function(){g(1)};
-document.addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowDown'){e.preventDefault();g(1)}else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();g(-1)}});
-var tx=0;document.addEventListener('touchstart',function(e){tx=e.changedTouches[0].screenX});
-document.addEventListener('touchend',function(e){var d=tx-e.changedTouches[0].screenX;if(Math.abs(d)>50)g(d>0?1:-1)});
-u();
-})()
+var T = ['頭城','【藏酒 酒莊】電話:03-977..','簡報大綱','頭城農場 & 藏酒酒莊','頭城農場 Toucheng Farm','離臺北才一小時並可結合的在地觀光..','www.tcfarm.com.t..','頭城農場的特色-獨一無二的臺灣農..','頭城農場與台灣休閒農業的發展過程相符','頭城休閒農場經營沿革','休閒農業的定義','綠色(農業)旅遊需求與原則','六塊水稻田 50公頃有機桂竹林 ..','因為友善土地農法而有生物多樣性(..','一日遊、二日遊 加強版(固定套裝..','頭城農場的綠色旅遊產品分類','綠色體驗資源--推廣有機無毒食材','標準行程加強版(六、日推出)-「..','綠色體驗資源-住宿符合綠色旅游標準','行(宣導利用大眾運輸、提供接駁並..','草仔粿DIY 森林步道導覽 金桔..','年度 授獎單位 授獎內容','時間 社會參與內容','六塊水田可以如何運用?','搓草繩-物盡其用 古農具-脫榖體..','以插秧體驗活動，拉近學員與土地的..','育 環境教育','推石磨 古農具介紹 插秧 跳草繩..','有機蔬菜園: 特色資源綜合運用','有機菜園巡禮','菜園多元運用-有機菜園巡禮 現場採購','從價格到價值的轉化(有機蔬菜園)','抱冬瓜比賽 稱重猜謎 刨皮 曬冬..','穆斯林友善餐飲、友善旅遊及旅館服..','市場拓展-節目採訪(藝人來我家~..','市場拓展-節目拍攝(五味八珍)','市場拓展-節目拍攝(含笑食堂)','2015 小農夫的大地廚房','里山食作小鋪','里山食作小鋪','放牧雞蛋與百香果 里山小點','芭蕉培根與百花蜜','蝶荳花飲與金桔','長菜豆與紫蘇醋','名稱 形式 執行時間 可執行人數..','Slide 46','Slide 47','Slide 48','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','以環保、生態、綠建築為概念，利用..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','經濟價值遞進圖','【藏酒 酒莊】電話:03-977..','結合地方共同發展-新港澳觀光特區','Slide 61','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','自然生態 酒窖巡訪 生態','酒莊的優勢 自然景觀與建築設計','酒莊的優勢 自然景觀與建築設計','自然景觀與建築設計','藏酒山林咖啡環境','藏酒酒宴館用餐環境','藏酒酒莊DIY體驗活動典範','藏酒酒莊冬季DIY體驗活動','藏酒酒莊-DIY體驗活動','藏酒酒莊-DIY體驗活動','4~6月 螢火蟲生態小旅行','藏酒酒莊 一日遊/半日遊','藏酒酒莊夏季午後輕食套裝','藏酒酒莊節氣活動','藏酒酒莊秋蟹餐酒搭配','藏酒酒莊秋蟹搭配天仙果鍋物','燒酒雞 藏酒米酒 主廚取[藏酒米..','獨家手創麵包雞 藏酒 指定菜','餐、品酒與音樂結合、創造典雅氣氛','【藏酒 酒莊】電話:03-977..','農特產品大部分可作為釀酒原料來源..','龜山朝日(金棗酒) Turtle..','紅麴的故鄉在宜蘭','107年度農村酒莊評鑒，取得優級..','106年度農村美酒評鑒，藏酒白葡..','農糧署自93年起推動實施「農業組..','101年SBIR科技創新–深層海..','可利用釀酒原料 米麴','以釀酒原料帶動體驗活動以及商品銷售','可利用釀材原料 酒粕','紅麴菌生 天然色素.紅麴介紹 紅..','十一道在地食材 食冢感官享受 極..','以餐酒特色餐飲帶動服務及商品銷售','以餐酒特色餐飲帶動服務及商品銷售','藏酒創意手作料理 十種在地料理 ..','春梅、夏葡、秋米、冬棗','釀造酒/3款 蒸餾酒/3款 再製..','藏酒系列-釀造酒','藏酒系列-蒸餾酒','藏酒系列-再製酒','藏酒系列-禮品組','鹽麴/4款 佐醬/3款 原醋/5款','梅子 原味 黑胡椒 芥末','藏私系列-鹽麴 55g NT180','藏私系列-佐醬','藏私系列-紅白酒醋','金桔醋、青梅醋、紫蘇醋: 250..','茶樹蕁麻葉精油 紅酒多酚精油 迷..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','觀光局媒體團(2018年) 藏酒..','魔法料理師(2014年) 壹電視..','(2015年) 360行向前衝節..','三立-TLC頻道-瘋台灣全明星(..','觀光局局長參訪(2018年) 日..','交通部觀光局長參訪(2018年1..','交通部觀光局長參訪(2018年1..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..','【藏酒 酒莊】電話:03-977..'];
+var i=0,N=T.length;
+function show(n){document.querySelectorAll('.slide').forEach(function(s,i){s.classList.toggle('active',i===n)});document.getElementById('pageInfo').textContent=(n+1)+' / '+N;i=n}
+function nextSlide(){show((i+1)%N)}
+function prevSlide(){show((i-1+N)%N)}
+document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')nextSlide();if(e.key==='ArrowLeft')prevSlide()});
+show(0);
 </script>
 </body>
 </html>
