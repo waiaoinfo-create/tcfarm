@@ -79,6 +79,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 .slide-bg{position:absolute;inset:0;z-index:0}
 .wine-img{width:100%;height:200px;object-fit:contain;border-radius:8px;margin-top:6px;background:linear-gradient(180deg,#fff,#f5f0e8);padding:10px;box-shadow:inset 0 0 20px rgba(255,255,255,.6)}
 .food-img{width:100%;height:300px;object-fit:contain;border-radius:8px;margin-top:6px;box-shadow:0 4px 16px rgba(0,0,0,.12);background:linear-gradient(180deg,#faf9f6,#f0ece4);padding:8px}
+.his-img{width:100%;height:420px;object-fit:cover;border-radius:10px;margin-top:8px;box-shadow:0 6px 24px rgba(0,0,0,.18);border:2px solid rgba(255,255,255,.08)}
 .ss.glass,.scard.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(6px);box-shadow:0 4px 16px rgba(0,0,0,.08)}
 .slide-bg-img{width:100%;height:100%;object-fit:cover;display:block;opacity:1}
 .slide-bg-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,14,.35) 0%,rgba(10,31,14,.2) 60%,rgba(26,58,30,.1) 100%)}
@@ -516,8 +517,18 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </div>
 </section>
-<section class="slide" data-title="四季佳釀">
+<section class="slide" data-title="歷史與永續">
 <div class="s-num">20</div>
+<div class="s-inner">
+<div class="s-head"><h2>酒莊歷史與永續發展</h2></div>
+<div class="s-grid2">
+<div class="scard" style="text-align:center;padding:14px"><h3>歷史</h3><img src="images/歷史.JPG" class="his-img"></div>
+<div class="scard" style="text-align:center;padding:14px"><h3>永續發展</h3><img src="images/永續.JPG" class="his-img"></div>
+</div>
+</div>
+</section>
+<section class="slide" data-title="四季佳釀">
+<div class="s-num">21</div>
 <div class="s-inner">
 <div class="s-head"><h2>🍷 四季佳釀酒款</h2><p>春梅夏葡秋米冬棗 — 順應節氣的釀造哲學</p></div>
 <div class="s-grid3">
@@ -531,7 +542,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="得獎紀錄">
-<div class="s-num">21</div>
+<div class="s-num">22</div>
 <div class="s-inner">
 <div class="s-head"><h2>國際得獎紀錄</h2><p>台灣金柑釀造工藝站上世界舞台</p></div>
 <div class="s-highlight">
@@ -565,7 +576,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="金柑產業">
-<div class="s-num">22</div>
+<div class="s-num">23</div>
 <div class="s-inner">
 <div class="s-head"><h2>金柑產業背景與升級</h2><p>從宜蘭農產到國際精品 — 一顆金柑的華麗轉身</p></div>
 <div class="s-stats">
@@ -594,7 +605,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="酒莊饗宴">
-<div class="s-num">23</div>
+<div class="s-num">24</div>
 <div class="s-inner">
 <div class="s-head"><h2>微醺饗宴</h2></div>
 <div class="s-grid3">
@@ -619,9 +630,9 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <p class="end-foot" style="margin-top:6px;color:rgba(255,255,255,.25)">🚫 禁止酒駕 · 未滿18歲禁止飲酒</p>
 </div>
 </section>
-<div class="slide-nav"><button onclick="prevSlide()">&#9664;</button><span class="page-info" id="pageInfo">1 / 25</span><button onclick="nextSlide()">&#9654;</button></div>
+<div class="slide-nav"><button onclick="prevSlide()">&#9664;</button><span class="page-info" id="pageInfo">1 / 26</span><button onclick="nextSlide()">&#9654;</button></div>
 <script>
-var T = ['封面','分享人簡介','農場概覽','歷程','自然環境','認證體系','地球志工','ESG實踐','森川里海','瀕危物種復育','體驗活動','在地餐桌','ESG案例','海廢案例','營運系統','循環農業','環教旅宿','合作方案','未來展望','酒莊介紹','四季佳釀','得獎紀錄','金柑產業','酒莊饗宴','結尾'];
+var T = ['封面','分享人簡介','農場概覽','歷程','自然環境','認證體系','地球志工','ESG實踐','森川里海','瀕危物種復育','體驗活動','在地餐桌','ESG案例','海廢案例','營運系統','循環農業','環教旅宿','合作方案','未來展望','酒莊介紹','歷史與永續','四季佳釀','得獎紀錄','金柑產業','酒莊饗宴','結尾'];
 var i=0,N=T.length;
 function show(n){document.querySelectorAll('.slide').forEach(function(s,i){s.classList.toggle('active',i===n)});document.getElementById('pageInfo').textContent=(n+1)+' / '+N;i=n}
 function nextSlide(){show((i+1)%N)}
