@@ -76,6 +76,12 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 .qr-label{display:block;font-size:clamp(.65rem,.9vw,.75rem);color:rgba(255,255,255,.45);margin-top:2px}
 .scroll-hint2{position:absolute;bottom:3vh;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-size:clamp(.8rem,1vw,.9rem);letter-spacing:1px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 .scroll-hint2 span{display:inline-block;animation:bounce2 1.5s infinite}
+.slide-bg{position:absolute;inset:0;z-index:0}
+.slide-bg-img{width:100%;height:100%;object-fit:cover;display:block}
+.slide-bg-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,14,.55),rgba(26,58,30,.4))}
+.s-img-row2{display:flex;gap:10px;margin-top:16px}
+.s-img-col{flex:1}
+.s-img-col img{width:100%;height:160px;object-fit:cover;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 @keyframes bounce2{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
 /* ── End ── */
 .end{background:linear-gradient(135deg,#0a1f0e,#1a3a1e,#2a5a2e);text-align:center}
@@ -124,6 +130,8 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 .slide-nav{gap:4px;padding:4px 8px}
 .slide-nav button{width:28px;height:28px;font-size:.7rem}
 .s-steps{font-size:.65rem}
+.s-img-row2{flex-direction:column}
+.s-img-col img{height:120px}
 }
 </style>
 </head>
@@ -495,9 +503,13 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="四季佳釀">
+<div class="slide-bg">
+<img src="images/20首頁.JPG" class="slide-bg-img">
+<div class="slide-bg-overlay"></div>
+</div>
 <div class="s-num">20</div>
-<div class="s-inner">
-<div class="s-head"><h2>🍷 四季佳釀與代表酒款</h2><p>春梅夏葡秋米冬棗 — 順應節氣的釀造哲學</p></div>
+<div class="s-inner" style="position:relative;z-index:2">
+<div class="s-head"><h2 style="color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.5)">🍷 四季佳釀與代表酒款</h2><p style="color:rgba(255,255,255,.75);text-shadow:0 1px 8px rgba(0,0,0,.4)">春梅夏葡秋米冬棗 — 順應節氣的釀造哲學</p></div>
 <div class="s-grid3">
 <div class="scard cc"><div class="sci">🌸</div><h3>春梅 · 青梅酒</h3><p>春日青梅，清新爽口。選用宜蘭在地青梅，以雪山泉水浸釀，酸甜均衡，尾韻清爽。</p></div>
 <div class="scard cc"><div class="sci">☀️</div><h3>夏葡 · 葡萄酒</h3><p>夏日葡萄，季節限定。嚴選台灣在地釀酒葡萄，每年夏季限量生產，果香豐盈。</p></div>
@@ -564,6 +576,10 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <li>宜蘭金柑品牌辨識度大幅提升</li>
 <li>吸引更多旅客體驗酒莊文化與深度旅遊</li>
 </ul></div>
+</div>
+<div class="s-img-row2">
+<div class="s-img-col"><img src="images/22-1.JPG"></div>
+<div class="s-img-col"><img src="images/22-2.JPG"></div>
 </div>
 </div>
 </section>
