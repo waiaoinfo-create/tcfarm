@@ -57,7 +57,9 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 .gold-l{border-top-color:#d4a01e}
 /* ── Cover ── */
 .cover{background:linear-gradient(135deg,#0a1f0e,#1a3a1e,#2a5a2e)}
-.cover-bg{position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,.04)"/><circle cx="150" cy="80" r="1.5" fill="rgba(255,255,255,.03)"/><circle cx="80" cy="160" r="2.5" fill="rgba(255,255,255,.03)"/></svg>') repeat;opacity:.5}
+.cover-bg{position:absolute;inset:0;overflow:hidden}
+.cover-bg-img{width:100%;height:100%;object-fit:cover;display:block;opacity:.35}
+.cover-bg-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,14,.85),rgba(26,58,30,.7))}
 .cover-content{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto;padding:4vh 2vw}
 .cover-badge{display:inline-block;border:1px solid rgba(212,160,30,.5);color:#d4a01e;padding:4px 18px;border-radius:20px;font-size:clamp(.7rem,1.2vw,.85rem);letter-spacing:2px;margin-bottom:clamp(8px,2vh,20px)}
 .cover-content h1{font-size:clamp(2.2rem,5vw,4.5rem);color:#fff;font-weight:800;line-height:1.1;margin-bottom:clamp(4px,1vh,12px)}
@@ -126,7 +128,10 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </style>
 </head>
 <body><section class="slide cover" data-title="封面">
-<div class="cover-bg"></div>
+<div class="cover-bg">
+<img src="images/首頁空拍.jpg" class="cover-bg-img">
+<div class="cover-bg-overlay"></div>
+</div>
 <div class="cover-content">
 <div class="cover-badge">✦ 1979 – 2026 ✦</div>
 <h1>頭城農場 <span class="gold">&amp;</span> 藏酒酒莊</h1>
@@ -146,8 +151,17 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 <div class="scroll-hint2">按下一頁或按 → 鍵繼續 <span>▶</span></div>
 </section>
-<section class="slide" data-title="農場概覽">
+<section class="slide" data-title="分享人簡介">
 <div class="s-num">01</div>
+<div class="s-inner" style="justify-content:center">
+<div class="s-head"><h2>分享人簡介</h2></div>
+<div class="s-fullimg">
+<img src="images/分享人介紹.JPG" alt="分享人介紹" style="width:100%;height:auto;max-height:62vh;object-fit:contain;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,.1)">
+</div>
+</div>
+</section>
+<section class="slide" data-title="農場概覽">
+<div class="s-num">02</div>
 <div class="s-inner">
 <div class="s-head"><h2>頭城農場概覽</h2><p>Toucheng Leisure Farm — 台灣東北角的永續農業典範</p></div>
 <div class="s-stats">
@@ -167,7 +181,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="歷程">
-<div class="s-num">02</div>
+<div class="s-num">03</div>
 <div class="s-inner">
 <div class="s-head"><h2>歷程</h2><p>從傳統農田到國際永續標竿 — 五階段演化</p></div>
 <div class="timeline">
@@ -180,7 +194,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="自然環境">
-<div class="s-num">03</div>
+<div class="s-num">04</div>
 <div class="s-inner">
 <div class="s-head"><h2>地理環境與自然資源</h2><p>雪山山脈與太平洋交會，得天獨厚的生態寶庫</p></div>
 <div class="s-stats">
@@ -198,7 +212,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="認證體系">
-<div class="s-num">04</div>
+<div class="s-num">05</div>
 <div class="s-inner">
 <div class="s-head"><h2>7項認證體系與國際肯定</h2><p>台灣取得最多國際永續認證的休閒農場之一</p></div>
 <div class="s-badge-row" style="margin-bottom:14px;gap:8px">
@@ -218,7 +232,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="地球志工">
-<div class="s-num">05</div>
+<div class="s-num">06</div>
 <div class="s-inner">
 <div class="s-head"><h2>🌏 地球志工 Earth Keeper</h2><p>全國首例遊程碳足跡取得DNV第三方國際查證</p></div>
 <div class="s-quote green" style="font-size:.95rem;margin-bottom:14px"><strong>四大核心亮點：</strong>①數據實證實踐永續影響 ②從單點示範到場域擴散 ③宜蘭環教場域培力升級 ④鏈結企業綠色採購ESG</div>
@@ -243,7 +257,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="ESG實踐">
-<div class="s-num">06</div>
+<div class="s-num">07</div>
 <div class="s-inner">
 <div class="s-head"><h2>永續發展與ESG實踐</h2><p>環境 Environmental × 社會 Social × 治理 Governance</p></div>
 <div class="s-grid3">
@@ -276,7 +290,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="森川里海">
-<div class="s-num">07</div>
+<div class="s-num">08</div>
 <div class="s-inner">
 <div class="s-head"><h2>森川里海核心策略</h2><p>從農場出發，連結山海，串聯企業與社區</p></div>
 <div class="s-grid4">
@@ -289,7 +303,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="瀕危物種復育">
-<div class="s-num">08</div>
+<div class="s-num">09</div>
 <div class="s-inner">
 <div class="s-head"><h2>🌱 瀕危物種復育 — 葦草蘭（鳥仔花）</h2><p>2026年4月正式啟動，企業、林業署與農場三方合作</p></div>
 <div class="s-grid2">
@@ -314,7 +328,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="體驗活動">
-<div class="s-num">09</div>
+<div class="s-num">10</div>
 <div class="s-inner">
 <div class="s-head"><h2>體驗活動與套裝行程</h2><p>從半日遊到二日遊，從賞螢到品酒，從親子到企業</p></div>
 <div class="s-grid3">
@@ -328,7 +342,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="在地餐桌">
-<div class="s-num">10</div>
+<div class="s-num">11</div>
 <div class="s-inner">
 <div class="s-head"><h2>在地餐桌與餐飲特色</h2><p>用食物說土地的故事 — 從產地到餐桌的永續飲食革命</p></div>
 <div class="s-grid3">
@@ -357,7 +371,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="ESG案例">
-<div class="s-num">11</div>
+<div class="s-num">12</div>
 <div class="s-inner">
 <div class="s-head"><h2>分享：企業ESG合作</h2><p>從森林復育到瀕危物種保育 — 企業與農場的永續夥伴關係</p></div>
 <div class="s-grid3">
@@ -377,7 +391,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="海廢案例">
-<div class="s-num">12</div>
+<div class="s-num">13</div>
 <div class="s-inner">
 <div class="s-head"><h2>分享：大溪漁港海廢治理</h2><p>Eco Box 循環箱 — 從漁港出發的海洋革命</p></div>
 <div class="s-grid2">
@@ -388,7 +402,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="營運系統">
-<div class="s-num">13</div>
+<div class="s-num">14</div>
 <div class="s-inner">
 <div class="s-head"><h2>農場服務推廣內容</h2></div>
 <div class="s-grid6">
@@ -402,7 +416,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="循環農業">
-<div class="s-num">14</div>
+<div class="s-num">15</div>
 <div class="s-inner">
 <div class="s-head"><h2>分享：循環農業實作與 KPI 框架</h2></div>
 <div class="s-grid2">
@@ -425,7 +439,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="環教旅宿">
-<div class="s-num">15</div>
+<div class="s-num">16</div>
 <div class="s-inner">
 <div class="s-head"><h2>環境教育與旅宿結合</h2></div>
 <div class="s-quote green" style="margin:4px 0 10px;font-size:.85rem;padding:10px 16px"><strong>學習路徑：</strong>看見（辨識物種與材料） → 理解（食物網與人地關係） → 操作（監測、堆肥與手作） → 反思（討論消費行為） → 行動（回家實踐與企業回訪）</div>
@@ -438,7 +452,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="合作方案">
-<div class="s-num">16</div>
+<div class="s-num">17</div>
 <div class="s-inner">
 <div class="s-head"><h2>合作方案與企業對接</h2><p>多種模式，滿足多元需求</p></div>
 <div class="s-grid3">
@@ -452,7 +466,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="未來展望">
-<div class="s-num">17</div>
+<div class="s-num">18</div>
 <div class="s-inner">
 <div class="s-head"><h2>未來展望</h2><p>從台灣東北角出發，邁向國際永續標竿</p></div>
 <div class="s-grid3">
@@ -464,7 +478,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="酒莊介紹">
-<div class="s-num">18</div>
+<div class="s-num">19</div>
 <div class="s-inner">
 <div class="s-head"><h2>藏酒酒莊介紹</h2><p>Cang Jiu Winery — 台灣第一家六級化產業生態酒莊</p></div>
 <div class="s-stats">
@@ -481,7 +495,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="四季佳釀">
-<div class="s-num">19</div>
+<div class="s-num">20</div>
 <div class="s-inner">
 <div class="s-head"><h2>🍷 四季佳釀與代表酒款</h2><p>春梅夏葡秋米冬棗 — 順應節氣的釀造哲學</p></div>
 <div class="s-grid3">
@@ -495,7 +509,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="得獎紀錄">
-<div class="s-num">20</div>
+<div class="s-num">21</div>
 <div class="s-inner">
 <div class="s-head"><h2>國際得獎紀錄</h2><p>台灣金柑釀造工藝站上世界舞台</p></div>
 <div class="s-highlight">
@@ -525,7 +539,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="金柑產業">
-<div class="s-num">21</div>
+<div class="s-num">22</div>
 <div class="s-inner">
 <div class="s-head"><h2>金柑產業背景與升級</h2><p>從宜蘭農產到國際精品 — 一顆金柑的華麗轉身</p></div>
 <div class="s-stats">
@@ -554,7 +568,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 </section>
 <section class="slide" data-title="酒莊饗宴">
-<div class="s-num">22</div>
+<div class="s-num">23</div>
 <div class="s-inner">
 <div class="s-head"><h2>🍽️ 藏酒酒莊 · 微醺饗宴</h2><p>山、水、酒、食融合的慢旅行體驗</p></div>
 <div class="s-grid3">
@@ -582,9 +596,9 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <p class="end-foot" style="margin-top:6px;color:rgba(255,255,255,.25)">🚫 禁止酒駕 · 未滿18歲禁止飲酒</p>
 </div>
 </section>
-<div class="slide-nav"><button onclick="prevSlide()">&#9664;</button><span class="page-info" id="pageInfo">1 / 24</span><button onclick="nextSlide()">&#9654;</button></div>
+<div class="slide-nav"><button onclick="prevSlide()">&#9664;</button><span class="page-info" id="pageInfo">1 / 25</span><button onclick="nextSlide()">&#9654;</button></div>
 <script>
-var T = ['封面','農場概覽','歷程','自然環境','認證體系','地球志工','ESG實踐','森川里海','瀕危物種復育','體驗活動','在地餐桌','ESG案例','海廢案例','營運系統','循環農業','環教旅宿','合作方案','未來展望','酒莊介紹','四季佳釀','得獎紀錄','金柑產業','酒莊饗宴','結尾'];
+var T = ['封面','分享人簡介','農場概覽','歷程','自然環境','認證體系','地球志工','ESG實踐','森川里海','瀕危物種復育','體驗活動','在地餐桌','ESG案例','海廢案例','營運系統','循環農業','環教旅宿','合作方案','未來展望','酒莊介紹','四季佳釀','得獎紀錄','金柑產業','酒莊饗宴','結尾'];
 var i=0,N=T.length;
 function show(n){document.querySelectorAll('.slide').forEach(function(s,i){s.classList.toggle('active',i===n)});document.getElementById('pageInfo').textContent=(n+1)+' / '+N;i=n}
 function nextSlide(){show((i+1)%N)}
