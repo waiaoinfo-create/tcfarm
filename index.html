@@ -9,50 +9,50 @@
 html{scroll-behavior:smooth}
 body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-serif;overflow:hidden;width:100vw;height:100dvh;background:#111;color:#222}
 /* ── Slide Container ── */
-.slide{display:none;width:100%;height:100dvh;overflow-y:auto;position:relative;padding:5vh 6vw 4vh;background:#faf9f6}
+.slide{display:none;width:100%;height:100dvh;overflow-y:auto;position:relative;padding:3vh 4vw 5vh;background:#faf9f6}
 .slide.active{display:flex;flex-direction:column;justify-content:center;align-items:center}
 /* ── Common ── */
-.s-inner{max-width:1100px;width:100%;margin:0 auto;padding:0}
+.s-inner{max-width:1200px;width:100%;margin:0 auto;padding:0}
 .s-head{text-align:center;margin-bottom:clamp(8px,1.5vh,18px)}
-.s-head h2{font-size:clamp(1.5rem,3vw,2.4rem);color:#1a5c2e;margin-bottom:4px;line-height:1.2}
-.s-head p{font-size:clamp(.85rem,1.4vw,1.05rem);color:#666;margin-top:-2px}
-.s-num{position:absolute;top:2vh;right:4vw;font-size:clamp(1.8rem,4vw,3.2rem);font-weight:800;color:#d4a01e;opacity:.2;letter-spacing:2px;z-index:0;pointer-events:none;line-height:1}
+.s-head h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:#1a5c2e;margin-bottom:6px;line-height:1.2}
+.s-head p{font-size:clamp(1.05rem,1.8vw,1.3rem);color:#666;margin-top:0}
+.s-num{position:absolute;top:1.5vh;right:3vw;font-size:clamp(2.2rem,5vw,4rem);font-weight:800;color:#d4a01e;opacity:.15;letter-spacing:2px;z-index:0;pointer-events:none;line-height:1}
 .s-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(6px,1vw,14px);margin:clamp(4px,1vh,12px) 0}
-.ss{text-align:center;padding:clamp(4px,1vh,10px) clamp(10px,1.5vw,20px);background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.06);min-width:80px;flex:1 0 auto;max-width:140px}
-.ss-n{font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;color:#1a5c2e;display:block}
-.ss-l{font-size:clamp(.65rem,1vw,.78rem);color:#555;display:block;margin-top:2px}
+.ss{text-align:center;padding:clamp(8px,1.2vh,14px) clamp(14px,2vw,26px);background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.06);min-width:100px;flex:1 0 auto;max-width:180px}
+.ss-n{font-size:clamp(1.4rem,2.5vw,1.9rem);font-weight:700;color:#1a5c2e;display:block}
+.ss-l{font-size:clamp(.85rem,1.2vw,1rem);color:#555;display:block;margin-top:3px}
 .ss.gold-b .ss-n,.gold-b .ss-n{color:#b8860b}
-.s-grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(6px,1.2vw,16px);margin-top:clamp(4px,.8vh,10px)}
-.s-grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(6px,1.2vw,16px);margin-top:clamp(4px,.8vh,10px)}
-.s-grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:clamp(6px,1vw,14px);margin-top:clamp(4px,.8vh,10px)}
-.s-grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(6px,1vw,14px);margin-top:clamp(4px,.8vh,10px)}
-.scard{background:#fff;border-radius:12px;padding:clamp(8px,1.2vh,16px);box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:3px solid #3a7d44;font-size:clamp(.75rem,1.15vw,.88rem);line-height:1.5}
+.s-grid2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(10px,1.5vw,20px);margin-top:clamp(6px,1vh,12px)}
+.s-grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(10px,1.5vw,20px);margin-top:clamp(6px,1vh,12px)}
+.s-grid4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:clamp(8px,1.2vw,16px);margin-top:clamp(6px,1vh,12px)}
+.s-grid6{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(10px,1.5vw,20px);margin-top:clamp(6px,1vh,12px)}
+.scard{background:#fff;border-radius:12px;padding:clamp(12px,1.8vh,22px);box-shadow:0 2px 8px rgba(0,0,0,.06);border-top:4px solid #3a7d44;font-size:clamp(1rem,1.6vw,1.15rem);line-height:1.55}
 .scard.cc{border-top-color:#1a5c2e}
 .scard.acc{border-top-color:#b8860b}
 .scard.esg{border-top-color:#1a5c2e}
 .scard.bp{border-top-color:#2e8b57}
-.scard h3{margin-bottom:4px;font-size:clamp(.85rem,1.2vw,.95rem)}
+.scard h3{margin-bottom:6px;font-size:clamp(1.15rem,1.7vw,1.35rem)}
 .scard h4{margin-bottom:4px}
-.scard ul{margin:4px 0 0 16px;padding:0}
+.scard ul{margin:6px 0 0 20px;padding:0}
 .scard li{margin-bottom:2px;line-height:1.4}
-.sci{font-size:clamp(1.2rem,2vw,1.6rem);margin-bottom:4px}
-.sci.lg{font-size:clamp(1.4rem,2.5vw,2rem)}
-.s-highlight{background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-left:4px solid #1a5c2e;border-radius:8px;padding:clamp(8px,1.2vh,14px);margin:clamp(4px,.8vh,10px) 0}
-.s-quote{font-style:italic;padding:clamp(6px,1vh,12px) clamp(10px,1.5vw,18px);background:#f0f7f0;border-radius:8px;border-left:3px solid #1a5c2e;font-size:clamp(.75rem,1.1vw,.85rem);margin:clamp(4px,.8vh,10px) 0}
+.sci{font-size:clamp(1.6rem,2.8vw,2.2rem);margin-bottom:6px}
+.sci.lg{font-size:clamp(1.8rem,3.2vw,2.6rem)}
+.s-highlight{background:linear-gradient(135deg,#e8f5e9,#f1f8e9);border-left:5px solid #1a5c2e;border-radius:8px;padding:clamp(12px,1.8vh,20px);margin:clamp(6px,1vh,14px) 0}
+.s-quote{font-style:italic;padding:clamp(10px,1.5vh,18px) clamp(14px,2vw,24px);background:#f0f7f0;border-radius:8px;border-left:5px solid #1a5c2e;font-size:clamp(1rem,1.5vw,1.15rem);margin:clamp(6px,1vh,14px) 0}
 .s-quote.green{background:#f0f7f0;border-left-color:#2e8b57}
-.s-contact{display:flex;flex-wrap:wrap;gap:clamp(6px,1vw,14px);margin-top:clamp(4px,.6vh,8px);font-size:clamp(.7rem,1vw,.8rem)}
+.s-contact{display:flex;flex-wrap:wrap;gap:clamp(8px,1.2vw,16px);margin-top:clamp(6px,.8vh,10px);font-size:clamp(.9rem,1.3vw,1.05rem)}
 .s-contact .clink{color:#1a5c2e;text-decoration:none;font-weight:500}
 .s-contact .clink:hover{text-decoration:underline}
 /* ── Badges ── */
 .s-badge-row{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
-.badge{display:inline-block;padding:4px 14px;border-radius:20px;font-size:.82rem;font-weight:600;letter-spacing:.5px}
+.badge{display:inline-block;padding:6px 18px;border-radius:24px;font-size:1rem;font-weight:600;letter-spacing:.5px}
 .badge.gstc{background:#1a5c2e;color:#fff}
 .badge.grn{background:#2e8b57;color:#fff}
 /* ── Timeline ── */
-.timeline{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:clamp(4px,.8vw,10px);margin-top:clamp(4px,.8vh,10px)}
-.tl{background:#fff;border-radius:10px;padding:clamp(6px,.8vh,12px);box-shadow:0 2px 6px rgba(0,0,0,.06);border-top:3px solid #3a7d44;font-size:clamp(.7rem,1vw,.82rem)}
-.tl-y{font-weight:700;color:#1a5c2e;font-size:clamp(.75rem,1.1vw,.88rem);margin-bottom:3px}
-.tl-c h4{margin-bottom:2px;font-size:clamp(.8rem,1.2vw,.9rem)}
+.timeline{display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:clamp(8px,1vw,14px);margin-top:clamp(4px,.8vh,10px)}
+.tl{background:#fff;border-radius:12px;padding:clamp(10px,1.2vh,16px);box-shadow:0 2px 6px rgba(0,0,0,.06);border-top:4px solid #3a7d44;font-size:clamp(.9rem,1.3vw,1.05rem)}
+.tl-y{font-weight:700;color:#1a5c2e;font-size:clamp(1rem,1.4vw,1.15rem);margin-bottom:4px}
+.tl-c h4{margin-bottom:4px;font-size:clamp(1.05rem,1.5vw,1.2rem)}
 .tl-c p{line-height:1.4}
 .gold-l{border-top-color:#d4a01e}
 /* ── Cover ── */
@@ -61,56 +61,56 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 .cover-bg-img{width:100%;height:100%;object-fit:cover;display:block;opacity:.55}
 .cover-bg-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,31,14,.85),rgba(26,58,30,.7))}
 .cover-content{position:relative;z-index:2;text-align:center;max-width:900px;margin:0 auto;padding:4vh 2vw}
-.cover-badge{display:inline-block;border:1px solid rgba(212,160,30,.5);color:#d4a01e;padding:4px 18px;border-radius:20px;font-size:clamp(.7rem,1.2vw,.85rem);letter-spacing:2px;margin-bottom:clamp(8px,2vh,20px)}
-.cover-content h1{font-size:clamp(2.2rem,5vw,4.5rem);color:#fff;font-weight:800;line-height:1.1;margin-bottom:clamp(4px,1vh,12px)}
+.cover-badge{display:inline-block;border:1px solid rgba(212,160,30,.5);color:#d4a01e;padding:6px 24px;border-radius:24px;font-size:clamp(.9rem,1.5vw,1.1rem);letter-spacing:2px;margin-bottom:clamp(10px,2.5vh,24px)}
+.cover-content h1{font-size:clamp(2.8rem,6vw,5rem);color:#fff;font-weight:800;line-height:1.1;margin-bottom:clamp(6px,1.5vh,16px)}
 .cover-content h1 .gold{color:#d4a01e}
-.cover-sub{font-size:clamp(1rem,2vw,1.5rem);color:#a8d5a2;margin-bottom:clamp(6px,1.5vh,16px)}
-.cover-desc{font-size:clamp(.75rem,1.3vw,.95rem);color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:clamp(8px,2vh,20px)}
+.cover-sub{font-size:clamp(1.3rem,2.5vw,1.8rem);color:#a8d5a2;margin-bottom:clamp(8px,2vh,20px)}
+.cover-desc{font-size:clamp(1rem,1.6vw,1.2rem);color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:clamp(10px,2.5vh,24px)}
 .cover-stats{display:flex;justify-content:center;gap:clamp(8px,2vw,30px);flex-wrap:wrap}
 .cstat{text-align:center}
-.cnum{font-size:clamp(1.1rem,2vw,1.8rem);font-weight:700;color:#d4a01e}
+.cnum{font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:700;color:#d4a01e}
 .cnum.gold{color:#ffd700}
-.clabel{font-size:clamp(.6rem,.9vw,.78rem);color:rgba(255,255,255,.55)}
+.clabel{font-size:clamp(.8rem,1.1vw,.95rem);color:rgba(255,255,255,.55)}
 .cover-qr{position:absolute;bottom:3vh;right:4vw;text-align:center;z-index:3}
 .qr-img{width:clamp(60px,6vw,80px);height:clamp(60px,6vw,80px);border-radius:6px;display:block;margin:0 auto}
-.qr-label{display:block;font-size:clamp(.5rem,.7vw,.6rem);color:rgba(255,255,255,.45);margin-top:2px}
-.scroll-hint2{position:absolute;bottom:3vh;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.35);font-size:clamp(.6rem,.8vw,.7rem);letter-spacing:1px}
+.qr-label{display:block;font-size:clamp(.65rem,.9vw,.75rem);color:rgba(255,255,255,.45);margin-top:2px}
+.scroll-hint2{position:absolute;bottom:3vh;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.35);font-size:clamp(.8rem,1vw,.9rem);letter-spacing:1px}
 .scroll-hint2 span{display:inline-block;animation:bounce2 1.5s infinite}
 @keyframes bounce2{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
 /* ── End ── */
 .end{background:linear-gradient(135deg,#0a1f0e,#1a3a1e,#2a5a2e);text-align:center}
 .end-bg{position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><circle cx="30" cy="30" r="2" fill="rgba(255,255,255,.04)"/><circle cx="150" cy="80" r="1.5" fill="rgba(255,255,255,.03)"/><circle cx="80" cy="160" r="2.5" fill="rgba(255,255,255,.03)"/></svg>') repeat;opacity:.5}
 .end-content{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:2vh 2vw}
-.end-content h2{font-size:clamp(1.8rem,4vw,3.2rem);color:#fff;margin-bottom:clamp(4px,1vh,10px)}
-.end-sub{font-size:clamp(.8rem,1.3vw,1rem);color:rgba(255,255,255,.6);margin-bottom:clamp(8px,2vh,20px)}
+.end-content h2{font-size:clamp(2.4rem,5vw,4rem);color:#fff;margin-bottom:clamp(8px,1.5vh,14px)}
+.end-sub{font-size:clamp(1rem,1.6vw,1.2rem);color:rgba(255,255,255,.6);margin-bottom:clamp(10px,2.5vh,24px)}
 .end-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:clamp(8px,1.5vw,20px);margin:0 auto}
 .ecard{background:rgba(255,255,255,.08);border-radius:10px;padding:clamp(8px,1.5vh,16px);text-align:left}
-.ecard h4{font-size:clamp(.85rem,1.2vw,1rem);color:#d4a01e;margin-bottom:4px}
-.ecard p{font-size:clamp(.65rem,.9vw,.78rem);color:rgba(255,255,255,.65);line-height:1.6}
-.end-rep{font-size:clamp(1rem,2vw,1.5rem);color:#fff;margin:clamp(8px,2vh,16px) 0}
-.end-foot{font-size:clamp(.55rem,.8vw,.7rem);color:rgba(255,255,255,.3)}
+.ecard h4{font-size:clamp(1.05rem,1.5vw,1.2rem);color:#d4a01e;margin-bottom:6px}
+.ecard p{font-size:clamp(.85rem,1.15vw,1rem);color:rgba(255,255,255,.65);line-height:1.6}
+.end-rep{font-size:clamp(1.3rem,2.5vw,1.8rem);color:#fff;margin:clamp(10px,2.5vh,20px) 0}
+.end-foot{font-size:clamp(.7rem,.95vw,.85rem);color:rgba(255,255,255,.3)}
 /* ── kpi row ── */
-.s-kpirow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:6px;font-size:clamp(.65rem,.9vw,.78rem)}
+.s-kpirow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px;font-size:clamp(.85rem,1.15vw,1rem)}
 .s-kpirow > div{background:#f0f7f0;padding:4px 8px;border-radius:6px;text-align:center}
 /* ── benefits ── */
-.s-benefits{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;margin:clamp(4px,.6vh,8px) 0;font-size:clamp(.7rem,1vw,.82rem)}
+.s-benefits{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin:clamp(6px,.8vh,10px) 0;font-size:clamp(.9rem,1.3vw,1.05rem)}
 .s-benefits > div{background:#f0f7f0;padding:6px 10px;border-radius:8px;text-align:center;border-left:3px solid #1a5c2e}
 .s-benefits strong{display:block;color:#1a5c2e}
 /* ── steps ── */
-.s-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin-top:clamp(4px,.6vh,8px);font-size:clamp(.6rem,.85vw,.72rem)}
-.s-steps span{background:#f0f7f0;padding:4px 10px;border-radius:6px;color:#1a5c2e;font-weight:500}
+.s-steps{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:clamp(6px,.8vh,10px);font-size:clamp(.8rem,1.1vw,.95rem)}
+.s-steps span{background:#f0f7f0;padding:6px 14px;border-radius:8px;color:#1a5c2e;font-weight:500}
 .s-steps span::after{content:" → ";margin-left:4px;color:#aaa;font-weight:400}
 .s-steps span:last-child::after{content:""}
 /* ── timetbl ── */
-.s-timetbl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-size:clamp(.7rem,1vw,.82rem)}
-.s-timetbl > div{background:#f0f7f0;padding:8px 10px;border-radius:8px;line-height:1.5}
+.s-timetbl{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-size:clamp(.9rem,1.3vw,1.05rem)}
+.s-timetbl > div{background:#f0f7f0;padding:10px 14px;border-radius:10px;line-height:1.5}
 /* ── navigation ── */
-.slide-nav{position:fixed;bottom:2.5vh;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:clamp(6px,1vw,12px);z-index:100;padding:clamp(4px,.6vh,8px) clamp(10px,1.5vw,18px);background:rgba(0,0,0,.65);backdrop-filter:blur(8px);border-radius:30px}
-.slide-nav button{background:rgba(255,255,255,.15);border:none;color:#fff;width:clamp(28px,3vw,36px);height:clamp(28px,3vw,36px);border-radius:50%;font-size:clamp(.7rem,1.2vw,.9rem);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;font-weight:700}
+.slide-nav{position:fixed;bottom:2.5vh;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:clamp(10px,1.5vw,18px);z-index:100;padding:clamp(8px,1vh,12px) clamp(16px,2vw,24px);background:rgba(0,0,0,.65);backdrop-filter:blur(8px);border-radius:30px}
+.slide-nav button{background:rgba(255,255,255,.15);border:none;color:#fff;width:clamp(36px,3.5vw,44px);height:clamp(36px,3.5vw,44px);border-radius:50%;font-size:clamp(.9rem,1.4vw,1.1rem);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;font-weight:700}
 .slide-nav button:hover{background:rgba(255,255,255,.3)}
-.slide-nav .page-info{color:rgba(255,255,255,.7);font-size:clamp(.6rem,.9vw,.75rem);min-width:clamp(40px,6vw,60px);text-align:center;font-weight:400}
+.slide-nav .page-info{color:rgba(255,255,255,.7);font-size:clamp(.8rem,1.1vw,.95rem);min-width:clamp(50px,7vw,70px);text-align:center;font-weight:400}
 /* ── Mobile ── */
-@media(max-width:640px){
+@media(max-width:800px){
 .slide{padding:3vh 4vw}
 .s-grid2,.s-grid3,.s-grid4,.s-grid6,.s-benefits,.s-timetbl,.s-kpirow,.end-grid{grid-template-columns:1fr!important}
 .s-head h2{font-size:clamp(1.1rem,5vw,1.3rem)}
@@ -216,12 +216,12 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <div class="s-inner">
 <div class="s-head"><h2>7項認證體系與國際肯定</h2><p>台灣取得最多國際永續認證的休閒農場之一</p></div>
 <div class="s-badge-row" style="margin-bottom:14px;gap:8px">
-<span class="badge gstc" style="font-size:.9rem;padding:8px 20px;font-weight:700;box-shadow:0 2px 6px rgba(26,92,46,.25)">🌍 GSTC Certified</span>
-<span class="badge" style="font-size:.9rem;padding:8px 20px;font-weight:700;background:#1a5276;color:#fff;box-shadow:0 2px 6px rgba(26,82,118,.25)">🏛️ UNWTO</span>
-<span class="badge" style="font-size:.9rem;padding:8px 20px;font-weight:700;background:#6b2fa0;color:#fff;box-shadow:0 2px 6px rgba(107,47,160,.25)">🌿 Rainforest Alliance</span>
-<span class="badge grn" style="font-size:.9rem;padding:8px 20px;font-weight:700;box-shadow:0 2px 6px rgba(46,139,87,.25)">✅ GTS Green Travel</span>
-<span class="badge gstc" style="font-size:.9rem;padding:8px 20px;font-weight:700;box-shadow:0 2px 6px rgba(26,92,46,.25)">📋 DNV Verified</span>
-<span class="badge grn" style="font-size:.9rem;padding:8px 20px;font-weight:700;box-shadow:0 2px 6px rgba(46,139,87,.25)">🏆 AEN Innovation</span>
+<span class="badge gstc" style="font-size:1.05rem;padding:10px 24px;font-weight:700;box-shadow:0 2px 6px rgba(26,92,46,.25)">🌍 GSTC Certified</span>
+<span class="badge" style="font-size:1.05rem;padding:10px 24px;font-weight:700;background:#1a5276;color:#fff;box-shadow:0 2px 6px rgba(26,82,118,.25)">🏛️ UNWTO</span>
+<span class="badge" style="font-size:1.05rem;padding:10px 24px;font-weight:700;background:#6b2fa0;color:#fff;box-shadow:0 2px 6px rgba(107,47,160,.25)">🌿 Rainforest Alliance</span>
+<span class="badge grn" style="font-size:1.05rem;padding:10px 24px;font-weight:700;box-shadow:0 2px 6px rgba(46,139,87,.25)">✅ GTS Green Travel</span>
+<span class="badge gstc" style="font-size:1.05rem;padding:10px 24px;font-weight:700;box-shadow:0 2px 6px rgba(26,92,46,.25)">📋 DNV Verified</span>
+<span class="badge grn" style="font-size:1.05rem;padding:10px 24px;font-weight:700;box-shadow:0 2px 6px rgba(46,139,87,.25)">🏆 AEN Innovation</span>
 </div>
 <div class="s-grid2">
 <div class="scard acc"><div class="sci">🌍</div><h3>GSTC 全球永續旅遊認證</h3><p>由UN Foundation、UNWTO、Rainforest Alliance共同發起。2018年通過Control Union稽核，2019年正式獲頒。東北角國家風景區首個國際永續旅館認證。</p></div>
@@ -235,7 +235,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <div class="s-num">06</div>
 <div class="s-inner">
 <div class="s-head"><h2>🌏 地球志工 Earth Keeper</h2><p>全國首例遊程碳足跡取得DNV第三方國際查證</p></div>
-<div class="s-quote green" style="font-size:.95rem;margin-bottom:14px"><strong>四大核心亮點：</strong>①數據實證實踐永續影響 ②從單點示範到場域擴散 ③宜蘭環教場域培力升級 ④鏈結企業綠色採購ESG</div>
+<div class="s-quote green" style="font-size:1.1rem;margin-bottom:16px"><strong>四大核心亮點：</strong>①數據實證實踐永續影響 ②從單點示範到場域擴散 ③宜蘭環教場域培力升級 ④鏈結企業綠色採購ESG</div>
 <div class="s-highlight">
 <div class="hl-badge">BREAKING</div>
 <h3>📢 2026/4/28 正式發布</h3>
@@ -352,16 +352,16 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 </div>
 <div class="s-highlight" style="margin-top:10px">
 <h3>🌿 森川里海主題餐桌 — 生態廚師謝燦祥策劃</h3>
-<div class="s-grid2" style="margin-top:6px;font-size:.88rem">
+<div class="s-grid2" style="margin-top:8px;font-size:1rem">
 <div><strong>🥗 前菜：</strong>林下多層次綠沙拉（紅心芭樂、採集野菜、薄荷香草醬）<br><strong>🍲 湯品：</strong>古道裡生物多樣性（破布雞肉丸、桂竹筍、馬告澄清湯）<br><strong>🐟 主菜：</strong>海洋永續（大溪漁港一支釣鬼頭刀）</div>
 <div><strong>🍚 主食：</strong>水稻米食（櫻花蝦與米苔目交織）<br><strong>🍰 甜點：</strong>大地饋贈（蜜漬金棗與金柑豆沙）<br><strong>🏆 獲獎：</strong>2022綠色餐飲指南大獎＋大東北角永續實踐第一名</div>
 </div>
 </div>
-<div class="s-quote green" style="margin:8px 0;font-size:.82rem;padding:8px 14px"><strong>教育機制：</strong>讓遊客一邊品嚐，一邊理解多層次森林是動物棲地；動物也是森林存續與繁衍的重要環節。</div>
-<div class="s-quote green" style="margin:4px 0 8px;font-size:.82rem;padding:8px 14px"><strong>商業價值：</strong>把傳統「導覽解說」升級為高客單價的沉浸式餐食服務；同時創造可拍攝、可記憶、可分享、可獲獎的差異化遊程。</div>
+<div class="s-quote green" style="margin:10px 0;font-size:.95rem;padding:10px 16px"><strong>教育機制：</strong>讓遊客一邊品嚐，一邊理解多層次森林是動物棲地；動物也是森林存續與繁衍的重要環節。</div>
+<div class="s-quote green" style="margin:6px 0 10px;font-size:.95rem;padding:10px 16px"><strong>商業價值：</strong>把傳統「導覽解說」升級為高客單價的沉浸式餐食服務；同時創造可拍攝、可記憶、可分享、可獲獎的差異化遊程。</div>
 <div class="s-highlight" style="margin:4px 0 0;padding:12px 14px">
 <h3>設計公式</h3>
-<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:.78rem;margin-top:4px">
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;font-size:.9rem;margin-top:6px">
 <div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>① 物種關係</strong><br>選擇生態角色</div>
 <div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>② 感官隱喻</strong><br>轉成味覺與動作</div>
 <div style="text-align:center;background:#f0f7f0;padding:6px;border-radius:6px"><strong>③ 解說節奏</strong><br>安排故事與提問</div>
@@ -398,7 +398,7 @@ body{font-family:'Segoe UI','Noto Sans TC','Microsoft JhengHei',system-ui,sans-s
 <div class="scard"><div class="sci">👨‍✈️</div><h3>發起人：船長黃士洋</h3><p>6年多前開始將海廢帶回岸上。發現海中廢棄物最大來源為漁獲保冰用的保麗龍，決心從源頭解決。</p><h4>Eco Box 解決方案</h4><ul><li>可重複使用的循環箱取代一次性保麗龍</li><li>海廢經熱壓處理變成再生板材</li><li>已成功設立海廢再生園區</li><li>成立「環保艦隊」串聯有志船長</li></ul></div>
 <div class="scard"><div class="sci">🌿</div><h3>頭城農場的角色</h3><p>農場將大溪漁港納入走讀深度旅遊行程，帶客人體驗漁獲拍賣、實際使用Eco Box。由船長親自介紹撈捕海鮮與海洋廢棄物。</p><h4>成果與意義</h4><ul><li>公私協力讓永續資源進入漁港最前線</li><li>建立山、川、里、海之間的流動關係</li><li>讓永續不再只是口號，而是人人能實踐的日常行動</li></ul></div>
 </div>
-<div class="s-contact" style="justify-content:center;font-size:.8rem"><span>♻️ 6+年海廢帶回行動</span><span>📦 Eco Box循環箱</span><span>🏭 海廢再生園區</span></div>
+<div class="s-contact" style="justify-content:center;font-size:.95rem"><span>♻️ 6+年海廢帶回行動</span><span>📦 Eco Box循環箱</span><span>🏭 海廢再生園區</span></div>
 </div>
 </section>
 <section class="slide" data-title="營運系統">
